@@ -1,0 +1,40 @@
+		li {
+   		display: inline; 
+		}
+
+	.menu {
+
+   		float:right; 
+		color:#000000; 
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		}
+
+	H1{
+   		color:#3581F3; 
+		}
+
+	.menuPrincipal {
+   		color:#3581F3; 
+		float:left;
+		}
+
+	#opcionesMenu li {
+   		display: block; 
+		}
+
+	#main {
+   		float: left; 
+		}
+
+	#content{
+   		margin: 10 0 10 0px;
+		width: 80%;
+	}
+
+	.menuPrincipal{
+  	 	width: 20%;
+   		float:left;
+	} 
