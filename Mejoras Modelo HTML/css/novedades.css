@@ -1,0 +1,19 @@
+.Table
+    {
+        display: table;
+        width= 50%;
+    }
+    .Row
+    {
+        display: table-row;
+        width= 20%
+        
+    }
+    .Cell
+    {
+        display: table-cell;
+    }
+    .C
+    {
+        text-align: center;
+    }
