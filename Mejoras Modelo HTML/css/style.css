@@ -39,7 +39,7 @@ position:relative;
 
 /* =============================== header ===================================== */
 .header {
-background: url(../img/foto3.jpg) no-repeat center fixed;
+background: url(../img/foto2.jpg) no-repeat center fixed;
     -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -159,17 +159,10 @@ color: #fff;
 text-decoration:underline;
 }
 /* ========================================= title page ==================================== */
-.line-title{
-border-top: 5px solid #dedede;
-height: 1px;
-display: block;
-position: relative;
-margin:0 -15px;
-padding-bottom:40px;
-}
+
 
 .title-page-white{
-color:#EA6480;
+color:#63C3EA;
 
 }
 .title-page-white h2{
@@ -177,13 +170,13 @@ display: table;
 background: #fff;
 position: relative;
 margin: 0 auto;
-top: 20px;
+top: -70px;
 z-index: 77;
 padding: 0 40px;
 }
 
 .title-page-gray{
-color:#EA6480;
+color:#7a7a7a;
 
 }
 .title-page-gray h2{
@@ -191,7 +184,7 @@ display: table;
 background: #f2f2f2;
 position: relative;
 margin: 0 auto;
-top: 20px;
+top: -70px;
 z-index: 77;
 padding: 0 40px;
 }
@@ -216,13 +209,13 @@ padding: 0 40px;
   position:relative;
 }
 .page-bgcolor{
-background:#e3dfdf;
+background:#f2f2f2;
 }
-/* ================================================= about us ================================================== */
+/* ================================================= Nosotros ================================================== */
 .about-content p{
 font-size:24px;
 }
-/* ============================================== Portfolio ================================================================= */
+/* ============================================== Catalogo ================================================================= */
 ul#filterOptions{
 margin: 0;
 padding: 3px 0;
