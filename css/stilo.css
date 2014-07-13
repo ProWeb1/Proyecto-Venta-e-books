@@ -131,18 +131,16 @@ top: 0px;
 /* ==============================================================  Menu ======================================================= */
 
 .navbar {
-border-radius: 0px;
+border-radius:0px;
 min-height: 86px;
 margin-bottom: 0px;
 width: 100%; 
 z-index:88;
 }
 a.navbar-brand img {
+margin-top: 0px;
 float: left;
 height: auto;
-}
-.navbar-inverse .navbar-brand {
-color:#fff;
 }
 .navbar-nav > li > a {
 padding-top: 32px;
@@ -305,7 +303,7 @@ float:left;
 } */
 @media screen and (min-width:240px) and (max-width: 1024px){
 .navbar-nav{
-margin:0;
+margin-top:0;
 }
 .vert-text h1 {
 font-size: 48px;
@@ -341,6 +339,9 @@ font-size:12px;
 }
 }
 @media screen and (min-width:240px) and (max-width: 767px){
+  a.navbar-brand img{
+height: inherit;
+}
 ul.container_folio{
 text-align:center;
 }
@@ -390,8 +391,8 @@ width: 20%;
 font-size:24px;
 top: 16px;
 }
-a.navbar-brand {
-font-size: 24px;
+a.navbar-brand img{
+height: inherit;
 }
 .about-content p, .contact p {
 font-size: 18px;
