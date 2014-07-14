@@ -1,4 +1,4 @@
-@import url('base-mi-slider.css');
+﻿@import url('base-mi-slider.css');
 
 /* Estilos principales del slider */
 .mi-slider {
@@ -36,7 +36,7 @@
 	display: inline-block;
 	padding: 20px;
 	width: 20%;
-	max-width: 300px;
+	max-width: 400px;
 	-webkit-transform: translateX(600%);
 	transform: translateX(600%);
 	-webkit-transition: opacity 0.2s linear;
@@ -61,7 +61,7 @@
 }
 
 .mi-slider ul li img {
-	max-width: 90%;
+	max-width: 110%;
 	border: none;
 }
 
@@ -71,7 +71,7 @@
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 	font-style: italic;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
 	padding: 20px 10px 0;
 }
 
@@ -87,7 +87,7 @@
 	text-align: center;
 	max-width: 800px;
 	margin: 0 auto;
-	border-top: 5px solid #333;
+	border-top: 5px solid #63C3EA;
 }
 
 .no-js nav {
@@ -101,6 +101,7 @@
 	letter-spacing: 5px;
 	padding: 40px 30px 30px 34px;
 	position: relative;
+	font-size: 16px;
 	color: #888;
 	outline: none;
 	-webkit-transition: color 0.2s linear;
@@ -128,7 +129,7 @@
 
 .mi-slider nav a.mi-selected:after {
 	border-color: transparent;
-	border-top-color: #fff;
+	border-top-color: #F2F1F0;
 	border-width: 20px;
 	left: 50%;
 	margin-left: -20px;
@@ -136,7 +137,7 @@
 
 .mi-slider nav a.mi-selected:before {
 	border-color: transparent;
-	border-top-color: #90D2E7;
+	border-top-color: #63C3EA;
 	border-width: 27px;
 	left: 50%;
 	margin-left: -27px;
