@@ -1,8 +1,5 @@
 body{
-	background: url(../images/fotolog.jpg) top center;
-	background-size: cover;
-    background-repeat: no-repeat;
-  
+	background: url(../images/fotolog.jpg) top center;  
 }
 .alert{
 	margin: 20px auto;
