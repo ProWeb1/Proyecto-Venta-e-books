@@ -223,7 +223,6 @@ font-size:24px;
 
 footer {
    color: #ffffff;
-  background: #90D2E7;
   padding: 20px 0;
 }
 .cp-right P{
@@ -269,6 +268,7 @@ padding-right: 10px;
 padding-left: 10px;
 }
 .list-inline > li a i{
+ margin-top: 20px;;
  vertical-align:middle;
  line-height: 41px;
 
