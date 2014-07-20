@@ -1,0 +1,73 @@
+
+body{
+	background:#fff;
+	color:#666;
+	font-family:'Droid Serif', Arial, Helvetica, sans-serif; 
+	font-size:1em;
+	line-height:1.4em; 
+	font-weight:normal;
+}
+
+
+
+/* Box sizing. Awesome thing. Read about it here: http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+{	box-sizing:border-box;
+	-moz-box-sizing:border-box;}
+  
+/* structure */   
+.wrapper{
+	width: 90 %; 
+	margin: 0 auto;
+}
+#page-header{
+	background:#f3f3f3;
+	border-top:1px solid #e2e2e2;
+
+	font-size:1.1em;
+}
+
+.flexslider{
+	display:block;
+}
+
+/*
+
+} 
+
+/*
+TABLET & SMALLER LAPTOPS
+The average viewing window and preferred media query for those is 768px.
+But I think that some more breathing space is good:)
+*/
+@media only screen and (min-width: 920px) {
+
+.wrapper{
+	max-width: 1200px; 
+	margin: .75em auto;
+}
+header{
+	padding:0;
+}
+#banner{ 
+	float:left; 
+	text-align:left;
+	margin-bottom:0px;
+	margin-top:5px;
+}
+#content {  
+	float:left;
+	width:65%;
+}
+#content.wide-content{
+	float:none;
+	width:100%;
+}
+
+.flexslider{
+	display:block;
+	margin: 0; 
+}
+
+.flex-control-nav {bottom: -20px;}
+
+
