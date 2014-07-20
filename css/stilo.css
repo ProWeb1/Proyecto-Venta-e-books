@@ -129,13 +129,7 @@ top: 0px;
 }
 
 /* ==============================================================  Menu ======================================================= */
-#ingreso{
-border-radius:0px;
-min-height: 86px;
-margin-bottom: 0px;
-width: 100%; 
-z-index:88; display :inline-block;
-}
+
 .navbar {
 border-radius:0px;
 min-height: 86px;
