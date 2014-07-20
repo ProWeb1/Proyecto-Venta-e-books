@@ -1,0 +1,25 @@
+body {
+
+}
+
+a:hover { color: #090; }
+
+.space30 { margin-top: 30px; }
+
+.row ul { padding-left: 30px; }
+
+/*.clear { clear: both; }
+
+/*.float_left { float: left; }
+.float_right { float: right; }
+*/
+
+.img_left_gallery {	float: left; margin: 12px; padding: 8px; border: 1px solid #CCC; }
+
+.img_left {	float: left; margin-right: 20px; margin-bottom: 15px; }
+
+.img_right { float: right; margin: 0px 0px 15px 20px; }
+
+.img_bottom { margin-bottom: 15px; }
+
+}

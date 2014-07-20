@@ -1,0 +1,46 @@
+
+.btn-orange {
+    background-color: #ff7600;
+    border-bottom:2px solid #d35400;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color:#ffffff;
+}
+
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open .dropdown-toggle.btn-orange {
+    background-color: #d35400;
+    color:#ffffff;
+}
+
+.span_autores {
+    margin-bottom: 80px;
+}
+
+.autores_info {
+    color: #333333; 
+    padding: 10px;
+}
+
+.autores_header {
+    font-weight: bold; 
+    font-size: 16px; 
+}
+
+.autores_text {
+    text-align: justify; 
+    font-size: 14px; 
+    margin-top: 20px;
+}
+
+.autores_box {
+	margin-left: -12px;
+}
+
+
+@media (min-width:768px) and (max-width:990px) {
+    .autores_box{
+       margin-right: -140px;
+    }
+}
+

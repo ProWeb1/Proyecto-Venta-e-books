@@ -1,0 +1,82 @@
+h4, h5, span, p { font-family: 'Open Sans', Arial, Helvetice Neue, sans-serif; }
+
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+/*Estilo interior de la imagen */
+.catalogo-galeria-imagen {
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+    height: 200px;
+    width: 200px;
+}
+
+.catalogo-galeria-imagen:hover .catalogo-overlay {
+    transition: all 0.3s ease-in-out 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*sombra y texto sobre la imagen */
+.catalogo-overlay {
+    background : rgba(0,0,0,.75);
+    border : 2px solid #ff7600;
+    visibility: hidden;
+    position: absolute;
+    text-align:center;
+    padding-top:40px;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.catalogo-overlay hr {
+    width : 70%;
+}
+
+/*espacio entre imagenes*/
+.catalogo-galeria li {
+    margin:10px;
+}
+
+
+ul.catalogo-galeria  li  a img:hover {
+    border: 3px solid #ff7600;
+}
+
+.catalogo-galeria {         
+    margin:0 0 0 0;
+    margin-top:30px;
+    margin-left: -40px;
+}
+.catalogo-galeria li {     
+    list-style:none;
+    margin-bottom:25px;           
+}
+.catalogo-galeria li img {
+  cursor: pointer;
+}
+
+@media (min-width:991px) and (max-width:1200px) {
+    .catalogo-galeria-imagen, .catalogo-overlay {
+        height:170px;
+        width:170px;
+    }
+}
+
+@media (min-width:768px) and (max-width:990px) {
+    .catalogo-galeria-imagen , .catalogo-overlay {
+       height:130px;
+       width:130px;
+       padding-top: 0px;
+    }
+}
+
