@@ -1,10 +1,11 @@
 <?php
 	require_once ('conection.php');
-	class usuario {
-		private $idusuario;
+	
+		class traductor {
+		private $idtraductor;
 		private $idpersona;
-		private $usuario;
-		private $clave;
+		private $idgrupo;
+		
 		const TABLA = 'traductor';
 
 		function __construct($idtraductor, $idpersona, $idgrupo){
