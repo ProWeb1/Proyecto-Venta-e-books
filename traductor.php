@@ -1,5 +1,5 @@
 <?php
-	
+	require_once ('conexion.php');
 	class usuario {
 		private $idusuario;
 		private $idpersona;
