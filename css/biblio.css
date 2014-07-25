@@ -1,0 +1,15 @@
+.btn-group{
+	border-radius:0px;
+}
+.container-fluid {
+  background-image: url(http://www.fondosya.com/wallpapers/tabla_de_madera-1280x800.jpg);
+}
+.gale img{
+	padding-top: 30px;
+	float:center;
+	display:block;
+	margin:0 auto 0 auto
+}
+.estrellitas {
+	display:inline;
+}
