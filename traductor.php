@@ -5,7 +5,7 @@
 		private $idpersona;
 		private $usuario;
 		private $clave;
-		const TABLA = 'usuario';
+		const TABLA = 'traductor';
 
 		function __construct($idtraductor, $idpersona, $idgrupo){
 			$this->idusuario = $idtraductor;
