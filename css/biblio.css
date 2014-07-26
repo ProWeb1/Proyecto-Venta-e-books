@@ -2,7 +2,7 @@
 	border-radius:0px;
 }
 .container-fluid {
-  background-image: url(http://www.fondosya.com/wallpapers/tabla_de_madera-1280x800.jpg);
+  background-image: url(http://pixabay.com/static/uploads/photo/2013/01/19/15/58/boards-75462_640.jpg);
 }
 .gale img{
 	padding-top: 30px;
@@ -12,4 +12,8 @@
 }
 .estrellitas {
 	display:inline;
+}
+.img-responsive:hover,
+.img-responsive:active {
+  background-color: #63C3EA;
 }
