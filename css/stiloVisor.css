@@ -1,3 +1,9 @@
 
-    html, body, div, iframe { margin:0; padding:0; height:100%; }
-    iframe { display:block; width:100%; border:none; }
+html, body, div, iframe{padding:0; height:100%; width: 100%; margin-width:0; margin-height:0; }
+body{
+margin-right: 0px;
+margin-left: 0px;
+margin-bottom: 0px;
+margin-top: 0px;
+}
+    iframe { display:block; width:100%; border:none;}
