@@ -1,12 +1,4 @@
 
-body{
-	background:#fff;
-	color:#666;
-	font-family:'Droid Serif', Arial, Helvetica, sans-serif; 
-	font-size:1em;
-	line-height:1.4em; 
-	font-weight:normal;
-}
 
 
 
@@ -43,11 +35,9 @@ But I think that some more breathing space is good:)
 
 .wrapper{
 	max-width: 1200px; 
-	margin: .75em auto;
+	margin:inherit;
 }
-header{
-	padding:0;
-}
+
 #banner{ 
 	float:left; 
 	text-align:left;
