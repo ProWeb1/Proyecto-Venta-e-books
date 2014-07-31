@@ -3066,7 +3066,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn-block {
   display: block;
