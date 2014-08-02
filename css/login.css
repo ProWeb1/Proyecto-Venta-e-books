@@ -1,6 +1,12 @@
 body{
 	background: url(../images/fotolog.jpg) top center;  
 }
+
+h3{
+	color: #fff;
+	text-align: center;
+}
+
 .alert{
 	margin: 20px auto;
 	width: 70%;
