@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `ebbbooks`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
 --
 -- Host: 127.0.0.1    Database: ebbbooks
 -- ------------------------------------------------------
--- Server version	5.6.19
+-- Server version	5.5.37-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,10 +27,16 @@ DROP TABLE IF EXISTS `perfil`;
 CREATE TABLE `perfil` (
   `codigo` int(11) NOT NULL,
   `fk_usuario` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellido` varchar(45) NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `genero` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `pais` varchar(45) NOT NULL,
   PRIMARY KEY (`codigo`),
   KEY `fk_perfil_usuario_idx` (`fk_usuario`),
   CONSTRAINT `fk_perfil_usuario` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-14 20:44:42
+-- Dump completed on 2014-08-05 10:24:33

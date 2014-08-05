@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `ebbbooks`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
 --
 -- Host: 127.0.0.1    Database: ebbbooks
 -- ------------------------------------------------------
--- Server version	5.6.19
+-- Server version	5.5.37-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,16 +26,10 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
   `codigo` int(11) NOT NULL,
-  `fk_persona` int(11) NOT NULL,
-  `fk_tarjeta` int(11) NOT NULL,
-  `usuario` varchar(45) NOT NULL,
-  `clave` varchar(45) NOT NULL,
-  PRIMARY KEY (`codigo`),
-  KEY `fk_usuario_persona_idx` (`fk_persona`),
-  KEY `fk_usuario_tarjeta_idx` (`fk_tarjeta`),
-  CONSTRAINT `fk_usuario_persona` FOREIGN KEY (`fk_persona`) REFERENCES `persona` (`codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuario_tarjeta` FOREIGN KEY (`fk_tarjeta`) REFERENCES `tarjeta_credito` (`codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `nombre` varchar(45) NOT NULL,
+  `contrasena` varchar(45) NOT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-14 20:44:41
+-- Dump completed on 2014-08-05 10:24:33

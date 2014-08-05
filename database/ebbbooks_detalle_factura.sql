@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `ebbbooks` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `ebbbooks`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
 --
 -- Host: 127.0.0.1    Database: ebbbooks
 -- ------------------------------------------------------
--- Server version	5.6.19
+-- Server version	5.5.37-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,15 +26,12 @@ DROP TABLE IF EXISTS `detalle_factura`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `detalle_factura` (
   `numero` int(11) NOT NULL,
-  `fk_cabecera_factura` int(11) NOT NULL,
-  `fk_producto` int(11) NOT NULL,
+  `fk_cabeceraFactura` int(11) NOT NULL,
   `linea` int(11) NOT NULL,
-  PRIMARY KEY (`numero`,`fk_cabecera_factura`,`fk_producto`),
-  KEY `fk_df_cabecera_factura_idx` (`fk_cabecera_factura`),
-  KEY `fk_df__idx` (`fk_producto`),
-  CONSTRAINT `fk_df_cabecera_factura` FOREIGN KEY (`fk_cabecera_factura`) REFERENCES `cabecera_factura` (`numero`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_df_producto` FOREIGN KEY (`fk_producto`) REFERENCES `producto` (`codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`numero`),
+  KEY `fk_df_cf_idx` (`fk_cabeceraFactura`),
+  CONSTRAINT `fk_df_cf` FOREIGN KEY (`fk_cabeceraFactura`) REFERENCES `cabecera_factura` (`numero`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-14 20:44:42
+-- Dump completed on 2014-08-05 10:24:33
