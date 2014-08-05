@@ -21,13 +21,13 @@ switch($_GET['action']){
 	<!DOCTYPE html>
 		<html class="no-js" lang="en">
 		<head>
+			<link href='images/logo/ebbbooks-logo.ico' rel='shortcut icon' type='image/x-icon'>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 	
 		    <meta charset="utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 			<meta name="description" content="eBBBOOKS login page">
 			<meta name="keywords" content="ebbbooks, login, account, register">
-			<meta name="author" content="eBBBOOKS">
-		    <link rel="shortcut icon" href="images/logomini.png">    
+			<meta name="author" content="eBBBOOKS">   
 			<title>Ingresar - eBBBOOKS</title>
 		    <!-- Bootstrap CSS -->
 		    <link href="css/bootstrap.css" rel="stylesheet">
@@ -55,6 +55,7 @@ switch($_GET['action']){
     <!DOCTYPE html>
 		<html class="no-js" lang="en">
 		<head>
+			<link href='images/logo/ebbbooks-logo.ico' rel='shortcut icon' type='image/x-icon'>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 	
 		    <meta charset="utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -77,7 +78,7 @@ switch($_GET['action']){
 					    <h3 class="animated bounceInDown">Ingresar</h3>	
 				       	<div class="login-box clearfix animated flipInY">
 					        <div class="login-logo">
-					       		<a href="index.html"><img src="images/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
+					       		<a href="index.html"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
 					        </div> 
 					        <hr>			        
 							<div class="login-form">	
