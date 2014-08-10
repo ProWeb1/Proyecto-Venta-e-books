@@ -1,67 +1,13 @@
-.cf:before, .cf:after {
-    content:"";
-    display:table;
-  }
-  .cf:after {clear:both; }
-  .cf { zoom:1; }
+<style type="text/css">
+body p {
+	font-family: Verdana, Geneva, sans-serif;
+}
+</style>
 
-   /* el formulario en si mismo */
- 
+<style type="text/css">
 
-   /* la caja donde se ingresa el texto a buscar */
-  .formulariodemo input {
-    background-color: #EEE;
-    border: none;
-    border-radius: 3px 0 0 3px;
-    float: left;
-    font-family: Tahoma;font-size:15px;font-weight: bold;
-    height: 20px;
-    padding: 10px 5px;
-    width: 330px;
-  }
-  .formulariodemo input:focus {
-    outline: 0;
-    background: #FFF;
-    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
-  }
-
-  /* el estilo de del atributo placeholder debe ser declarado para cada navegador de modo separado */
-  .formulariodemo input:-moz-placeholder { color: #999; font-weight: normal; font-style: italic; }
-  .formulariodemo input::-webkit-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
-  .formulariodemo input:-ms-input-placeholder { color: #999; font-weight: normal; font-style: italic; }
-
-  /* aquí iría el estilo de del atributo required si es que se desea definirlo */
-  .formulariodemo input:required { box-shadow: none; }
-
-   /* el botón de envio */
-  .formulariodemo button {
-    background-color: #9099A1;
-    border: none;
-    border-radius: 0 3px 3px 0;
-    color: #FFF;
-    cursor: pointer;
-    float: right;
-    font-family: Tahoma;
-    font-size: 15px;
-    font-weight: bold;
-    height: 40px;
-    overflow: visible;
-    padding: 0;
-    position: relative;
-    text-transform: uppercase;
-    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-    width: 110px;
-  }
-  .formulariodemo button:hover{ background: #E54040; } 
-  .formulariodemo button:active, .formulariodemo button:focus{ background: #C42F2F; }
-  .formulariodemo button:before { /* el detalle del triángulo izquierdo */
-    content: "";
-    border-color: transparent #9099A1 transparent;
-    border-style: solid solid solid none;
-    border-width: 8px 8px 8px 0;
-    left: -6px;
-    position: absolute;
-    top: 12px;
-  }
-  .formulariodemo button:hover:before { border-right-color: #E54040; }
-  .formulariodemo button:focus:before { border-right-color: #C42F2F; }    
+input{outline:none;border:0px;}
+#busqueda{background:#ffffff;color:#000000;}
+#cdr{padding:5px;background:#90D2E7;width:220px;border-radius:0px 0px 0px 0px;}
+#tab{background:#ffffff;;border-radius:1px 1px 1px 1px;}
+</style>
