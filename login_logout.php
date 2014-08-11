@@ -1,11 +1,17 @@
 <?php
+include_once("UsuarioCollector.php");
 session_start();
+$UsuarioCollectorObj = new UsuarioCollector();
 switch($_GET['action']){
 	case 'login':{
-		if($_REQUEST['username'] == 'doge' && $_POST['password'] == '123')
+	foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+		if($_REQUEST['username'] == $c->getNombre() && $_POST['password'] == $c->getContrasena()){
 			$_SESSION['actualmente_ingresado'] = 1;
+			break;
+		}
 		else
-			$mensaje = '<h3 class="animated bounceInDown">Usuario o Clave incorrectos.</h3>';
+			echo "<script>alert('La contrasena del usuario no es correcta.'); window.location.href=\"login_logout.php\"</script>";
+	}
 	}break;
 	
 	case 'logout':{
