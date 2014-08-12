@@ -54,6 +54,13 @@ h3{
 	border-radius: 5px;
 	padding: 5px;
 }
+.gender-radio {
+	width:80%;
+	margin: 5px auto 10px;
+	text-align: center;
+	color:#FFF;
+	text-shadow: 1px 1px 2px #000;
+}
  
 .login-box hr{
 	margin:10px auto 20px;

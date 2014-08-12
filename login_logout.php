@@ -4,26 +4,19 @@ session_start();
 $UsuarioCollectorObj = new UsuarioCollector();
 switch($_GET['action']){
 	case 'login':{
-	foreach ($UsuarioCollectorObj->showUsuarios() as $c){
-		if($_REQUEST['username'] == $c->getNombre() && $_POST['password'] == $c->getContrasena()){
-			$_SESSION['actualmente_ingresado'] = 1;
-			break;
+		foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+			if($_REQUEST['username'] == $c->getNombre() && $_POST['password'] == $c->getContrasena())
+				$_SESSION['actualmente_ingresado'] = 1;	
+			else
+				$mensajeError = '<h3 class="animated bounceInDown">Usuario o Clave incorrectos.</h3>';
 		}
-		else
-			echo "<script>alert('La contrasena del usuario no es correcta.'); window.location.href=\"login_logout.php\"</script>";
-	}
 	}break;
-	
 	case 'logout':{
 		session_destroy();
 		header('Location: login_logout.php');
 	}break;
 }
-?>
-
-
-
-<?php if($_SESSION['actualmente_ingresado'] == 1){ ?>
+?><?php if($_SESSION['actualmente_ingresado'] == 1){?>
 	<!DOCTYPE html>
 		<html class="no-js" lang="en">
 		<head>
@@ -112,4 +105,3 @@ switch($_GET['action']){
 		</body>
 		</html>
 <?php } ?>
-<div style="font-weight:bold;"><?=$mensaje?></div>

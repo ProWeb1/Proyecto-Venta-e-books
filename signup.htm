@@ -7,7 +7,7 @@
 	<meta name="description" content="eBBBOOKS register page">
 	<meta name="keywords" content="ebbbooks, login, account, register, password">
 	<meta name="author" content="eBBBOOKS">
-    <link rel="shortcut icon" href="images/logomini.png">
+    <link rel="shortcut icon" href="images/logo/logomini.png">
 	<title>Registro - eBBBOOKS</title>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,18 +23,27 @@
 			    <h3 class="animated bounceInDown">Reg&iacute;strate</h3>
 			    <div class="login-box clearfix animated flipInY">
 			       	<div class="login-logo">
-			       		<a href="index.html"><img src="images/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
+			       		<a href="index.html"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
 			       	</div> 
 			       	<hr>
 			       	<div class="login-form">
 			       		<form action="signup.htm" method="get">     			
-						   	<input type="text" placeholder="Usuario" required=""> 
-						   	<input type="email" placeholder="E-mail" required=""> 
+						   	<input type="text" placeholder="Usuario" required="">
+								<input type="text" placeholder="Nombres" required="">
+								<input type="text" placeholder="Apellidos" required="">
+								<input type="text" placeholder="Pa&iacute;s" required="">
+								<div class="gender-radio"> 
+									<strong>G&eacute;nero:</strong></br></br>
+									Masculino<input type="radio" name="genero" value="M">
+									Femenino<input type="radio" name="genero" value="F">
+								</div>
+						   	<input type="email" placeholder="E-mail" required="">
 						   	<input type="password" placeholder="Contrase&ntilde;a" required="">  
 						   	<input type="password" placeholder="Confirmar contrase&ntilde;a" required="">  
 						   	<label class="checkbox">
-        		                <input type="checkbox" value="option1"> Acepto los t&eacute;rminos y condiciones.
-        		           	</label>
+        		                <input type="checkbox" value="option1">
+														<a href="/pdf/TerminosCondiciones.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
+								</label>
 						   	<button type="submit" class="btn btn-login">Reg&iacute;strame</button> 
 						</form>	
 						<div class="login-links"> 
