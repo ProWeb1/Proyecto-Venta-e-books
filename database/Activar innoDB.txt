@@ -1,0 +1,4 @@
+1. Abrir el archivo my.ini (\AppServ\mysql)
+2. Buscar y descomentar la linea "default-storage-engine=INNODB"
+3. Buscar y comentar la linea "skip-innodb"
+4. Reiniciar Mysql
