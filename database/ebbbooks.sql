@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 15-08-2014 a las 12:18:32
+-- Tiempo de generación: 16-08-2014 a las 04:51:19
 -- Versión del servidor: 5.0.51
 -- Versión de PHP: 5.2.6
 
@@ -22,7 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE `autor` (
   `idAutor` int(11) NOT NULL auto_increment,
   `nombreCompleto` varchar(45) NOT NULL,
-  `bio` text NOT NULL,
+  `bio` text,
   `foto` varchar(50) NOT NULL,
   PRIMARY KEY  (`idAutor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -62,7 +62,8 @@ CREATE TABLE `coleccion` (
   `fk_perfil` int(11) NOT NULL,
   `fk_ebook` int(11) NOT NULL,
   `secuencia` int(11) NOT NULL,
-  KEY `fk_perfil` (`fk_perfil`,`fk_ebook`)
+  KEY `fk_perfil` (`fk_perfil`),
+  KEY `fk_ebook` (`fk_ebook`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
@@ -107,7 +108,7 @@ CREATE TABLE `ebook` (
   `precio` double NOT NULL,
   `categoria` varchar(45) NOT NULL,
   `portada` varchar(50) NOT NULL,
-  `resena` text NOT NULL,
+  `resena` text,
   PRIMARY KEY  (`idEbook`),
   KEY `fk_autor` (`fk_autor`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -149,7 +150,7 @@ CREATE TABLE `perfil` (
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `infoUsuario` text NOT NULL,
+  `infoUsuario` text,
   `genero` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `pais` varchar(45) NOT NULL,
@@ -185,7 +186,38 @@ CREATE TABLE `usuario` (
 -- 
 
 -- 
+-- Filtros para la tabla `cabecera_factura`
+-- 
+ALTER TABLE `cabecera_factura`
+  ADD CONSTRAINT `cabecera_factura_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`);
+
+-- 
+-- Filtros para la tabla `coleccion`
+-- 
+ALTER TABLE `coleccion`
+  ADD CONSTRAINT `coleccion_ibfk_1` FOREIGN KEY (`fk_perfil`) REFERENCES `perfil` (`idPerfil`),
+  ADD CONSTRAINT `coleccion_ibfk_2` FOREIGN KEY (`fk_ebook`) REFERENCES `ebook` (`idEbook`);
+
+-- 
+-- Filtros para la tabla `detalle_factura`
+-- 
+ALTER TABLE `detalle_factura`
+  ADD CONSTRAINT `detalle_factura_ibfk_1` FOREIGN KEY (`fk_cabeceraFactura`) REFERENCES `cabecera_factura` (`idCabecera`);
+
+-- 
 -- Filtros para la tabla `ebook`
 -- 
 ALTER TABLE `ebook`
   ADD CONSTRAINT `ebook_ibfk_1` FOREIGN KEY (`fk_autor`) REFERENCES `autor` (`idAutor`);
+
+-- 
+-- Filtros para la tabla `libreria`
+-- 
+ALTER TABLE `libreria`
+  ADD CONSTRAINT `libreria_ibfk_1` FOREIGN KEY (`fk_perfil`) REFERENCES `perfil` (`idPerfil`);
+
+-- 
+-- Filtros para la tabla `perfil`
+-- 
+ALTER TABLE `perfil`
+  ADD CONSTRAINT `perfil_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`);
