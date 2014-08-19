@@ -2,21 +2,21 @@
 -- version 2.10.3
 -- http://www.phpmyadmin.net
 -- 
--- Servidor: localhost
--- Tiempo de generación: 16-08-2014 a las 07:04:28
--- Versión del servidor: 5.0.51
--- Versión de PHP: 5.2.6
+-- Host: localhost
+-- Generation Time: Aug 18, 2014 at 09:52 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 -- 
--- Base de datos: `ebbbooks`
+-- Database: `ebbbooks`
 -- 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `autor`
+-- Table structure for table `autor`
 -- 
 
 CREATE TABLE `autor` (
@@ -28,7 +28,7 @@ CREATE TABLE `autor` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
 
 -- 
--- Volcar la base de datos para la tabla `autor`
+-- Dumping data for table `autor`
 -- 
 
 INSERT INTO `autor` VALUES (1, 'Anna Godbersen', NULL, 'images/autores/');
@@ -77,7 +77,7 @@ INSERT INTO `autor` VALUES (42, 'Lauren Skidmore', NULL, 'images/autores/');
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `cabecera_factura`
+-- Table structure for table `cabecera_factura`
 -- 
 
 CREATE TABLE `cabecera_factura` (
@@ -90,14 +90,14 @@ CREATE TABLE `cabecera_factura` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Volcar la base de datos para la tabla `cabecera_factura`
+-- Dumping data for table `cabecera_factura`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `coleccion`
+-- Table structure for table `coleccion`
 -- 
 
 CREATE TABLE `coleccion` (
@@ -109,14 +109,14 @@ CREATE TABLE `coleccion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 
--- Volcar la base de datos para la tabla `coleccion`
+-- Dumping data for table `coleccion`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `detalle_factura`
+-- Table structure for table `detalle_factura`
 -- 
 
 CREATE TABLE `detalle_factura` (
@@ -128,14 +128,14 @@ CREATE TABLE `detalle_factura` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Volcar la base de datos para la tabla `detalle_factura`
+-- Dumping data for table `detalle_factura`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `ebook`
+-- Table structure for table `ebook`
 -- 
 
 CREATE TABLE `ebook` (
@@ -145,7 +145,7 @@ CREATE TABLE `ebook` (
   `idioma` varchar(45) NOT NULL,
   `isbn` varchar(45) NOT NULL,
   `editorial` varchar(45) NOT NULL,
-  `num_paginas` int(4) NOT NULL,
+  `numero_paginas` int(4) NOT NULL,
   `traductor` varchar(45) NOT NULL,
   `precio` double NOT NULL,
   `categoria` varchar(45) NOT NULL,
@@ -156,7 +156,7 @@ CREATE TABLE `ebook` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 -- 
--- Volcar la base de datos para la tabla `ebook`
+-- Dumping data for table `ebook`
 -- 
 
 INSERT INTO `ebook` VALUES (1, 1, 'Envy', 'Español', '0061345725', 'HarperCollins', 405, 'Rafael Ramírez', 8.03, 'Drama', 'images/portadas/1.jpg', NULL);
@@ -211,7 +211,7 @@ INSERT INTO `ebook` VALUES (48, 42, 'What is Hidden', 'Español', '1462114296', 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `libreria`
+-- Table structure for table `libreria`
 -- 
 
 CREATE TABLE `libreria` (
@@ -223,14 +223,14 @@ CREATE TABLE `libreria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Volcar la base de datos para la tabla `libreria`
+-- Dumping data for table `libreria`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `perfil`
+-- Table structure for table `perfil`
 -- 
 
 CREATE TABLE `perfil` (
@@ -249,14 +249,14 @@ CREATE TABLE `perfil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Volcar la base de datos para la tabla `perfil`
+-- Dumping data for table `perfil`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `usuario`
 -- 
 
 CREATE TABLE `usuario` (
@@ -264,50 +264,53 @@ CREATE TABLE `usuario` (
   `nombre` varchar(45) NOT NULL,
   `contrasena` varchar(45) NOT NULL,
   PRIMARY KEY  (`idUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- 
--- Volcar la base de datos para la tabla `usuario`
+-- Dumping data for table `usuario`
 -- 
 
+INSERT INTO `usuario` VALUES (1, 'jonathan92', 'venga');
+INSERT INTO `usuario` VALUES (2, 'connantrutman', 'connanmismo');
+INSERT INTO `usuario` VALUES (3, 'Darkspines-00', 'Mobius00');
 
 -- 
--- Filtros para las tablas descargadas (dump)
+-- Constraints for dumped tables
 -- 
 
 -- 
--- Filtros para la tabla `cabecera_factura`
+-- Constraints for table `cabecera_factura`
 -- 
 ALTER TABLE `cabecera_factura`
   ADD CONSTRAINT `cabecera_factura_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`);
 
 -- 
--- Filtros para la tabla `coleccion`
+-- Constraints for table `coleccion`
 -- 
 ALTER TABLE `coleccion`
   ADD CONSTRAINT `coleccion_ibfk_1` FOREIGN KEY (`fk_perfil`) REFERENCES `perfil` (`idPerfil`),
   ADD CONSTRAINT `coleccion_ibfk_2` FOREIGN KEY (`fk_ebook`) REFERENCES `ebook` (`idEbook`);
 
 -- 
--- Filtros para la tabla `detalle_factura`
+-- Constraints for table `detalle_factura`
 -- 
 ALTER TABLE `detalle_factura`
   ADD CONSTRAINT `detalle_factura_ibfk_1` FOREIGN KEY (`fk_cabeceraFactura`) REFERENCES `cabecera_factura` (`idCabecera`);
 
 -- 
--- Filtros para la tabla `ebook`
+-- Constraints for table `ebook`
 -- 
 ALTER TABLE `ebook`
   ADD CONSTRAINT `ebook_ibfk_1` FOREIGN KEY (`fk_autor`) REFERENCES `autor` (`idAutor`);
 
 -- 
--- Filtros para la tabla `libreria`
+-- Constraints for table `libreria`
 -- 
 ALTER TABLE `libreria`
   ADD CONSTRAINT `libreria_ibfk_1` FOREIGN KEY (`fk_perfil`) REFERENCES `perfil` (`idPerfil`);
 
 -- 
--- Filtros para la tabla `perfil`
+-- Constraints for table `perfil`
 -- 
 ALTER TABLE `perfil`
   ADD CONSTRAINT `perfil_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`);
