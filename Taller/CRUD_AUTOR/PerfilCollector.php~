@@ -1,0 +1,21 @@
+<?php
+
+include_once('Perfil.php');
+include_once('Collector.php');
+
+class PerfilCollector extends Collector
+{
+  
+  function showPerfiles() {
+    $rows = self::$db->getRows("SELECT * FROM perfil ");        
+    $arrayPerfil= array();        
+    foreach ($rows as $c){
+      $aux = new Perfil($c{'idPerfil'},$c{'nombre'},$c{'apellido'},$c{'fechaNacimiento'},$c{'genero'},$c{'email'},$c{'pais'});
+      array_push($arrayPerfil, $aux);
+    }
+    return $arrayPerfil;        
+  }
+
+}
+?>
+
