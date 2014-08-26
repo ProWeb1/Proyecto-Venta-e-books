@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Aug 20, 2014 at 11:05 PM
+-- Generation Time: Aug 25, 2014 at 10:52 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -22,57 +22,57 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE `autor` (
   `idAutor` int(11) NOT NULL auto_increment,
   `nombreCompleto` varchar(45) NOT NULL,
-  `bio` text,
-  `foto` varchar(50) NOT NULL,
+  `foto` varchar(45) NOT NULL,
   PRIMARY KEY  (`idAutor`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 -- 
 -- Dumping data for table `autor`
 -- 
 
-INSERT INTO `autor` VALUES (1, 'Anna Godbersen', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (2, 'Kelley Armstrong', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (3, 'Sarah Cross', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (4, 'Patrick Rothfuss', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (5, 'Cayla Kluver', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (6, 'Juliet Dark', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (7, 'Katie Alender', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (8, 'Amber Lynn Natusch', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (9, 'Kiersten White', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (10, 'Tahereh Mafi', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (11, 'Alivia Anders', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (12, 'Erika Johansen', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (13, 'Rosamund Hodge', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (14, 'Amber Argyle', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (15, 'Catherine Fisher', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (16, 'N.K. Jemisin', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (17, 'Danielle L. Jensen', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (18, 'Veronica Rossi', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (19, 'Mary E. Pearson', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (20, 'Donna Tartt', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (21, 'Neil Gaiman', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (22, 'Freda Warrington', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (23, 'Deborah Harkness', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (24, 'Paul Hoffman', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (25, 'Holly Black', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (26, 'Brenna Yovanoff', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (27, 'Elizabeth May', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (28, 'Christina Lauren', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (29, 'Colleen Gleason', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (30, 'Alex Flinn', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (31, 'Kiera Cass', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (32, 'Sarah Raughley', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (33, 'Kristen Callihan', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (34, 'Marissa Meyer', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (35, 'Amy Ewing', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (36, 'Carolyn Turgeon', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (37, 'Nalini Singh', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (38, 'Kady Cross', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (39, 'Ilsa J. Bick', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (40, 'Patricia Leever', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (41, 'Laini Taylor', NULL, 'images/autores/');
-INSERT INTO `autor` VALUES (42, 'Lauren Skidmore', NULL, 'images/autores/');
+INSERT INTO `autor` VALUES (1, 'Anna Godbersen', 'images/autores/1.jpg');
+INSERT INTO `autor` VALUES (2, 'Kelley Armstrong', 'images/autores/2.jpg');
+INSERT INTO `autor` VALUES (3, 'Sarah Cross', 'images/autores/3.jpg');
+INSERT INTO `autor` VALUES (4, 'Patrick Rothfuss', 'images/autores/4.jpg');
+INSERT INTO `autor` VALUES (5, 'Cayla Kluver', 'images/autores/5.jpg');
+INSERT INTO `autor` VALUES (6, 'Juliet Dark', 'images/autores/6.jpg');
+INSERT INTO `autor` VALUES (7, 'Katie Alender', 'images/autores/7.jpg');
+INSERT INTO `autor` VALUES (8, 'Amber Lynn Natusch', 'images/autores/8.jpg');
+INSERT INTO `autor` VALUES (9, 'Kiersten White', 'images/autores/9.jpg');
+INSERT INTO `autor` VALUES (10, 'Tahereh Mafi', 'images/autores/10.jpg');
+INSERT INTO `autor` VALUES (11, 'Alivia Anders', '');
+INSERT INTO `autor` VALUES (12, 'Erika Johansen', '');
+INSERT INTO `autor` VALUES (13, 'Rosamund Hodge', '');
+INSERT INTO `autor` VALUES (14, 'Amber Argyle', '');
+INSERT INTO `autor` VALUES (15, 'Catherine Fisher', '');
+INSERT INTO `autor` VALUES (16, 'N.K. Jemisin', '');
+INSERT INTO `autor` VALUES (17, 'Danielle L. Jensen', '');
+INSERT INTO `autor` VALUES (18, 'Veronica Rossi', '');
+INSERT INTO `autor` VALUES (19, 'Mary E. Pearson', '');
+INSERT INTO `autor` VALUES (20, 'Donna Tartt', '');
+INSERT INTO `autor` VALUES (21, 'Neil Gaiman', '');
+INSERT INTO `autor` VALUES (22, 'Freda Warrington', '');
+INSERT INTO `autor` VALUES (23, 'Deborah Harkness', '');
+INSERT INTO `autor` VALUES (24, 'Paul Hoffman', '');
+INSERT INTO `autor` VALUES (25, 'Holly Black', '');
+INSERT INTO `autor` VALUES (26, 'Brenna Yovanoff', '');
+INSERT INTO `autor` VALUES (27, 'Elizabeth May', '');
+INSERT INTO `autor` VALUES (28, 'Christina Lauren', '');
+INSERT INTO `autor` VALUES (29, 'Colleen Gleason', '');
+INSERT INTO `autor` VALUES (30, 'Alex Flinn', '');
+INSERT INTO `autor` VALUES (31, 'Kiera Cass', '');
+INSERT INTO `autor` VALUES (32, 'Sarah Raughley', '');
+INSERT INTO `autor` VALUES (33, 'Kristen Callihan', '');
+INSERT INTO `autor` VALUES (34, 'Marissa Meyer', '');
+INSERT INTO `autor` VALUES (35, 'Amy Ewing', '');
+INSERT INTO `autor` VALUES (36, 'Carolyn Turgeon', '');
+INSERT INTO `autor` VALUES (37, 'Nalini Singh', '');
+INSERT INTO `autor` VALUES (38, 'Kady Cross', '');
+INSERT INTO `autor` VALUES (39, 'Ilsa J. Bick', '');
+INSERT INTO `autor` VALUES (40, 'Patricia Leever', '');
+INSERT INTO `autor` VALUES (41, 'Laini Taylor', '');
+INSERT INTO `autor` VALUES (42, 'Lauren Skidmore', '');
+INSERT INTO `autor` VALUES (43, 'Gia', '');
 
 -- --------------------------------------------------------
 
@@ -114,6 +114,10 @@ CREATE TABLE `coleccion` (
 -- Dumping data for table `coleccion`
 -- 
 
+INSERT INTO `coleccion` VALUES (2, 8, 1);
+INSERT INTO `coleccion` VALUES (2, 5, 2);
+INSERT INTO `coleccion` VALUES (3, 2, 1);
+INSERT INTO `coleccion` VALUES (3, 20, 2);
 
 -- --------------------------------------------------------
 
@@ -293,8 +297,8 @@ ALTER TABLE `cabecera_factura`
 -- Constraints for table `coleccion`
 -- 
 ALTER TABLE `coleccion`
-  ADD CONSTRAINT `coleccion_ibfk_2` FOREIGN KEY (`fk_ebook`) REFERENCES `ebook` (`idEbook`),
-  ADD CONSTRAINT `coleccion_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`);
+  ADD CONSTRAINT `coleccion_ibfk_1` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`idUsuario`),
+  ADD CONSTRAINT `coleccion_ibfk_2` FOREIGN KEY (`fk_ebook`) REFERENCES `ebook` (`idEbook`);
 
 -- 
 -- Constraints for table `detalle_factura`
