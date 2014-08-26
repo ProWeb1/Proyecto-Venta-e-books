@@ -1,5 +1,5 @@
-﻿<?php
-include_once("php/UsuarioCollector.php");
+<?php
+include_once("UsuarioCollector.php");
 session_start();
 $UsuarioCollectorObj = new UsuarioCollector();
 switch($_GET['action']){
@@ -8,6 +8,7 @@ switch($_GET['action']){
 			if($_REQUEST['username'] == $c->getNombreUsuario() && $_POST['password'] == $c->getContrasena()){
 				$_SESSION['actualmente_ingresado'] = 1;
 				$_SESSION['username'] = $c->getNombreUsuario();
+				$_SESSION['idUsuario'] = $c->getIdUsuario();
 			}else
 				$mensajeError = '<h3 class="animated bounceInDown">Usuario o Clave incorrectos.</h3>';
 				//echo $mensajeError;
