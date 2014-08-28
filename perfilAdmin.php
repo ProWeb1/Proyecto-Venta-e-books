@@ -1,4 +1,4 @@
-<?php  
+﻿<?php  
 session_start();
 $usuario = $_SESSION["username"];
 if($_SESSION['actualmente_ingresado'] == 1){
@@ -83,7 +83,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
    </div>
    <div class="col-md-2 col-sm-3 col-xs-6">
 <p>Usuario</p>
-   <a href=" " onclick="location.href='login.htm'"><i class="fa fa-user fa-5x pull-left fa-border"></i></a>
+   <a href="crudUsuario/indexUsuario.php"><i class="fa fa-user fa-5x pull-left fa-border"></i></a>
     
    </div>
    <div class="col-md-2 col-sm-3 col-xs-6">

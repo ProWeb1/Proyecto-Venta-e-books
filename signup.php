@@ -27,7 +27,7 @@
 			       	</div> 
 			       	<hr>
 			       	<div class="login-form">
-			       		<form action="php/insertUsuario.php" method="post">     			
+			       		<form action="insertUsuario.php" method="post">     			
 						   	<input type="text" placeholder="Usuario" name="nombreUsuario" required="">
 							<input type="password" placeholder="Contrase&ntilde;a" name="contrasena" required="">  
 						   	<input type="password" placeholder="Confirmar contrase&ntilde;a" required="">  
