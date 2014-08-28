@@ -14,7 +14,18 @@ include_once('Collector.php');
 }*/
 class UsuarioCollector extends Collector
 {
-  
+
+  function showUsuarios() {
+    $idUsuario=$_SESSION["idUsuario"];
+    $rows = self::$db->getRows("SELECT * FROM usuario WHERE idUsuario LIKE '".$idUsuario."'");        
+    $arrayUsuario= array();
+    foreach ($rows as $c){
+      $aux = new Usuario($c{'idUsuario'},$c{'nombreUsuario'},$c{'contrasena'},$c{'foto'},$c{'nombre'},$c{'apellido'},$c{'fechaNacimiento'},$c{'infoUsuario'},$c{'genero'},$c{'email'},$c{'pais'});
+      array_push($arrayUsuario, $aux);
+    }
+    return $arrayUsuario;        
+  }
+
   function showUsuario($id) {
     $row = self::$db->getRows("SELECT * FROM usuario where idUsuario= ? ", array("{$id}")); 
     $ObjUsuario = new Usuario($id,$row[0]{'nombreUsuario'},$row[0]{'contrasena'},$row[0]{'foto'},$row[0]{'nombre'},$row[0]{'apellido'},$row[0]{'fechaNacimiento'},$row[0]{'infoUsuario'},$row[0]{'genero'},$row[0]{'email'},$row[0]{'pais'});

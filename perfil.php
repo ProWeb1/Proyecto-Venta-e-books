@@ -32,7 +32,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> <img src= "images/logo/ebbbooks-logo.png"></a>
+            <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
         
         <!-- Navegación-->
@@ -70,28 +70,45 @@ if($_SESSION['actualmente_ingresado'] == 1){
 
           <!-- Start Left Side -->
         <div class="col-xs-12 col-sm-3 text-center">
-          <img src="images/perfil/dogeop.jpg" class="img-responsive img-border" alt="" />
-          <h1>Doge</h1>
-          <div class="social-links">
-          	</br>
-            <a href="#"><i class="icon-facebook-sign icon-large"></i> Facebook</a>
-          </div>
-          <div class="contact-info text-center">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-                <p><i class="icon-map-marker"></i> 1234 Doge's House, XX 54321</p>
-                <p><i class="icon-phone"></i> (593)993-456758</p>
-                <p><i class="icon-envelope"></i> <a href="#">doge@gmail.com</a></p>
-								</br>
-								<center><p><a class="btn btn-primary" href="">Editar Perfil</a></p></center>
-              </div>
-            </div>
-          </div>
-        </div>
+          
+<?php
+
+include_once("UsuarioCollector.php");
+
+       $nombrearray= array();
+       $nombreCollectorObj = new UsuarioCollector();
+       foreach ($nombreCollectorObj->showUsuarios() as $a){
+        $aux1 = $a->getFoto();
+	$aux2 = $a->getNombre(); 
+	$aux3 = $a->getApellido();
+	$aux4 = $a->getFechaNacimiento();
+	$aux5 = $a->getInfoUsuario();
+	$aux6 = $a->getGenero();
+	$aux7 = $a->getEmail();
+	$aux8 = $a->getPais();
+	
+	if ($aux6 == f)
+		$genero = 'Femenino';
+	else
+		$genero = 'Masculino';
+
+       echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';	
+       echo  '<h2>'.$aux2.' '.$aux3.'</h2>'; 
+       echo '<div class="contact-info text-center">
+            	<div class="row">
+              		<div class="col-xs-12 col-sm-12">
+                		<p><strong>Fecha de Nacimiento: </strong>'.$aux4.'</p>
+                		<p><strong>G&eacute;nero: </strong>'.$genero.'</p>
+                		<p><strong>Correo: </strong>'.$aux7.'</a></p>
+				<p><strong>Pa&iacute;s: </strong>'.$aux8.'</a></p>
+				</br>
+				<center><p><a class="btn btn-primary" href="">Editar Perfil</a></p></center>
+              		</div>
+            	</div>
+             </div>
+	</div>
         <!-- End Left Side -->
-
         <div class="clearfix visible-xs"></div>
-
         <!-- Start Right Side -->
         <div class="col-xs-12 col-sm-9">
           <div class="row">
@@ -99,18 +116,13 @@ if($_SESSION['actualmente_ingresado'] == 1){
 
               <!-- Start About Me -->
               <h2>Acerca de mi:</h2>
-              <p>Very read. Such literature. So ebooks. Much description. Wow.</p>
-              <!-- End About Me -->
-
-              <!-- Start Intereses -->
-              <h2>Intereses:</h2>
-              <p><span class="label label-primary">Fantas&iacute;a</span> <span class="label label-primary">Romance</span> <span class="label label-primary">Ciencia Ficci&oacute;n</span></p>
-              <!-- End Intereses -->
-
+              <p>'.$aux5.'</p>
+              <!-- End About Me -->'; 
+	}
+?>
               <!-- libros -->
-              <h2>Agregados recientemente: </h2>
-
-              <div class="row projects">
+              <h2>Agregados recientemente: </h2>         
+		<div class="row projects">
 
                 <div class="col-xs-6 col-sm-3">
                   <a href="visorPdf.html"><img src="images/fichasLibros/img3.jpg" class="img-responsive img-border" alt="" /></a>
@@ -155,7 +167,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
   <div class="col-md-12 ">
   <div class="gale">
     
-      <?
+<?
 
 include_once("ebooksElegidosCollector.php");
 
@@ -313,7 +325,7 @@ echo '</div>';
         <div class="row">
 			<div class="col-md-4 ">
 				<div class="constr cp-right">
-					<p>&copy; 2014 <a href="http://ebbbooks.com">eBBBOOKS</a>. All Rights Reserved. </p>
+					<p>&copy; 2014 <a href="index.php">eBBBOOKS</a>. All Rights Reserved. </p>
 				</div><!-- end contr -->
 			</div><!-- Final de Columna -->
 			<div class="col-md-4 text-center">
