@@ -48,11 +48,11 @@ switch($_GET['action']){
 			    	<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
 					    <h3 class="animated bounceInDown"><a href="index.html">Continuar a eBBBOOKS</a></h3>
 					     <?
-					    if ( $_SESSION['idUsuario'] == 1){
-					   echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>'; }
-					    else {
+					    if ( $_SESSION['idUsuario'] == 1)
+					   echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>'; 
+					    else 
 					    	echo '<h3 class="animated bounceInDown"><a href="perfil.php">Continuar a Perfil</a></h3>';
-					    }
+					    
 					    ?>
 					</div>
 				</div>
