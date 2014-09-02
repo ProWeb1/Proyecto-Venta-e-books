@@ -17,7 +17,7 @@ foreach ($EbookCollectorObj->showEbooks1() as $c){
 	foreach ($ColeccionCollectorObj->guardarColeccion() as $nuevo){
 		$variable=$nuevo->getfk_ebook();
 		if ( $variable2 == $variable){
-			array_push($arrayEbooksElegidos, $c->getportada());
+			array_push($arrayEbooksElegidos, $c);
 				}
 			} 
 		}

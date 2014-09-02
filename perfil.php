@@ -185,10 +185,10 @@ include_once("ebooksElegidosCollector.php");
       if (eregi("gif", $archivo) || eregi("jpg", $archivo) || eregi("png", $archivo)){
         $compara = ($directory."/".$archivo);
       for($i = 0; $i < sizeof($arrayColeccion1);$i++){
-      if ($compara == $arrayColeccion1[$i]){
+      if ($compara == $arrayColeccion1[$i]->getportada()){
 
             echo '<div class="col-md-2 col-sm-3 col-xs-6">';
-  echo '<a href="#">';
+  echo '<a href='.$arrayColeccion1[$i]->getenlace().'>';
             echo '<img  class="img-responsive" src="'.$directory."/".$archivo.'">';
       
       
