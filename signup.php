@@ -44,7 +44,7 @@
 							<input type="text" placeholder="Pa&iacute;s" name="pais" required="">
 						   	<label class="checkbox">
         		                			<input type="checkbox" value="acepto">
-								<a href="/pdf/TerminosCondiciones.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
+								<a href="pdf/T-P.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
 							</label>
 						   	<input type="submit" class="btn btn-login" value="Reg&iacute;strame"> 
 						</form>	
