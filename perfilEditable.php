@@ -72,11 +72,13 @@ if($_SESSION['actualmente_ingresado'] == 1){
 <?php
 
 include_once("UsuarioCollector.php");
-
+include_once("Usuario.php");
        $nombrearray= array();
        $nombreCollectorObj = new UsuarioCollector();
        foreach ($nombreCollectorObj->showUsuarios() as $a){
-        $aux1 = $a->getFoto();
+	$aux9 = $a->getIdUsuario();
+	$aux10 = $a->getNombreUsuario();
+	$aux11 = $a->getContrasena();
 	$aux2 = $a->getNombre(); 
 	$aux3 = $a->getApellido();
 	$aux4 = $a->getFechaNacimiento();
@@ -84,26 +86,39 @@ include_once("UsuarioCollector.php");
 	$aux6 = $a->getGenero();
 	$aux7 = $a->getEmail();
 	$aux8 = $a->getPais();
-	
-	if ($aux6 == f)
-		$genero = 'Femenino';
-	else
-		$genero = 'Masculino';
 
-       echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';	
-       echo  '<h2>'.$aux2.' '.$aux3.'</h2>'; 
-       echo '<div class="contact-info text-center">
-            	<div class="row">
-              		<div class="col-xs-12 col-sm-12">
-                		<p><strong>Fecha de Nacimiento: </strong>'.$aux4.'</p>
-                		<p><strong>G&eacute;nero: </strong>'.$genero.'</p>
-                		<p><strong>Correo: </strong>'.$aux7.'</a></p>
-				<p><strong>Pa&iacute;s: </strong>'.$aux8.'</a></p>
-				</br>
-				<center><p><a class="btn btn-primary" href="perfilEditable.php">Editar Perfil</a></p></center>
-              		</div>
-            	</div>
-             </div>
+       echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';
+       echo '<form action="editarPerfil.php" method="post">
+		<p>
+		C&oacute;digo de Usuario: <input type="text" name="idUsuario"  value="'.$aux9.'" readonly />
+		</p>
+		<p>
+		Usuario: <input type="text" name="nombreUsuario"  value="'.$aux10.'" />
+		</p>
+		<p>
+		Contrase&ntilde;a: <input type="text" name="contrasena"  value="'.$aux11.'" />
+		</p>
+		<p>
+		Nombre: <input type="text" name="nombre"  value="'.$aux2.'" />
+		</p>
+		<p>
+		Apellido: <input type="text" name="apellido"  value="'.$aux3.'" />
+		</p>
+		<p>
+		Fecha de Nacimiento: <input type="date" name="fechaNacimiento"  value="'.$aux4.'" />
+		</p>
+		<p>
+		G&eacute;nero: <input type="text" name="genero"  value="'.$aux6.'" />
+		</p>
+		<p>
+		Correo: <input type="text" name="email"  value="'.$aux7.'" />
+		</p>
+		<p>
+		Pa&iacute;s: <input type="text" name="pais"  value="'.$aux8.'" />
+		</p>
+		<a href="perfil.php">Cancelar</a>
+		<input class="btn btn-primary" type="submit" value="Guardar" />
+	    </form>
 	</div>
         <!-- End Left Side -->
         <div class="clearfix visible-xs"></div>
@@ -114,7 +129,8 @@ include_once("UsuarioCollector.php");
 
               <!-- Start About Me -->
               <h2>Acerca de mi:</h2>
-              <p>'.$aux5.'</p>
+	      <form action="editarPerfil.php" method="post" >
+              <p><input type="text" name="infoUsuario"  value="'.$aux5.'" /></p></form>
               <!-- End About Me -->'; 
 	}
 ?>
@@ -137,7 +153,7 @@ include_once("UsuarioCollector.php");
   <div class="col-md-12 ">
   <div class="gale">
     
-<?php
+<?
 
 include_once("ebooksElegidosCollector.php");
 
@@ -258,6 +274,8 @@ echo '</div>';
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
               <li><span>|</span></li>
               <li><a id "salida" href="" onclick="location.href='carrito.htm'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='#'"><i class="fa fa fa-search"></i></a></li>
             </ul>
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->

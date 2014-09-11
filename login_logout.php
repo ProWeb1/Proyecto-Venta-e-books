@@ -47,9 +47,9 @@ switch($_GET['action']){
 		    	<div class="row">		
 			    	<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
 					    <h3 class="animated bounceInDown"><a href="index.html">Continuar a eBBBOOKS</a></h3>
-					     <?
+					     <?php
 					    if ( $_SESSION['idUsuario'] == 1)
-					   echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>'; 
+					   	echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>';
 					    else 
 					    	echo '<h3 class="animated bounceInDown"><a href="perfil.php">Continuar a Perfil</a></h3>';
 					    
@@ -99,7 +99,7 @@ switch($_GET['action']){
 							   		<button type="submit" class="btn btn-login">Ingresar</button> 
 								</form>	
 								<div class="login-links"> 
-							    	<a href="signup.htm">No tienes una cuenta? <strong>Reg&iacute;strate</strong> </a>
+							    	<a href="signup.php">No tienes una cuenta? <strong>Reg&iacute;strate</strong> </a>
 								</div>  
 					        </div> 
 						</div>
