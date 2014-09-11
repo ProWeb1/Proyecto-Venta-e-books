@@ -9,6 +9,18 @@ $UsuarioCollectorObj = new UsuarioCollector();
 <div id="main">
 <table>
 <tr><td><a href="formularioUsuarioInsert.php">Nuevo</a></td></tr>
+<tr>
+<td><strong>Id</strong></td>
+<td><strong>Usuario</strong></td>
+<td><strong>Contrase&ntilde;a</strong></td>
+<td><strong>Url de Foto</strong></td>
+<td><strong>Nombre</strong></td>
+<td><strong>Apellido</strong></td>
+<td><strong>Fecha de Nacimiento</strong></td>
+<td><strong>Informaci&oacute;n del Usuario</strong></td>
+<td><strong>G&eacute;nero</strong></td>
+<td><strong>Email</strong></td>
+<td><strong>Pa&iacute;s</strong></td></tr>
 <?php
 foreach ($UsuarioCollectorObj->readUsuarios() as $c){
   echo "<tr>";
@@ -29,7 +41,7 @@ foreach ($UsuarioCollectorObj->readUsuarios() as $c){
   echo "</tr>"; 
 }
 ?>
-<a href='../perfilAdmin.php'>Regresar a Perfil de Adminstrador</a
+<tr><td colspan='11'><a href='../perfilAdmin.php'>Regresar a Perfil de Administrador</a></td></tr>
 </table>
 </div>
 </body>
