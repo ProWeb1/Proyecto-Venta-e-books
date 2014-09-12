@@ -17,7 +17,7 @@ class AutorCollector extends Collector
   }
   function showAutor($id) {
     $row = self::$db->getRows("SELECT * FROM autor where idAutor= ? ", array("{$id}")); 
-    $ObjAutor = new Autor($row[0]{'idAutor'},$row[0]{'nombreCompleto'});
+    $ObjAutor = new Autor($row[0]{'idAutor'},$row[0]{'nombreCompleto'},$row[0]{'foto'});
     return $ObjAutor;
   }
 
@@ -29,7 +29,7 @@ class AutorCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM autor ");        
     $arrayAutor= array();        
     foreach ($rows as $c){
-      $aux = new Autor($c{'idAutor'},$c{'nombreCompleto'});
+      $aux = new Autor($c{'idAutor'},$c{'nombreCompleto'},$c{'nombreCompleto'});
       array_push($arrayAutor, $aux);
     }
     return $arrayAutor;        

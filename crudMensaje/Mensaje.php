@@ -4,14 +4,14 @@
 		private $nombre;
 		private $email;
 		private $asunto;
-		private $mensaje;
+		private $texto;
 
-		function __construct($idMensaje, $nombre, $email, $asunto, $mensaje){
+		function __construct($idMensaje, $nombre, $email, $asunto, $texto){
 			$this->idMensaje=$idMensaje;
 			$this->nombre=$nombre;
 			$this->email=$email;
 			$this->asunto=$asunto;
-			$this->mensaje=$mensaje;
+			$this->texto=$texto;
 		}
 
 		function getIdMensaje(){
@@ -30,8 +30,8 @@
 			return $this->asunto;
 		}
 
-		function getMensaje(){
-			return $this->mensaje;
+		function getTexto(){
+			return $this->texto;
 		}
 
 		function setIdMensaje($idMensaje){
@@ -50,8 +50,8 @@
 			$this->asunto = $asunto;
 		}
 
-		function setMensaje($mensaje){
-			$this->mensaje = $mensaje;
+		function setTexto($texto){
+			$this->texto = $texto;
 		}
 	}
 ?>

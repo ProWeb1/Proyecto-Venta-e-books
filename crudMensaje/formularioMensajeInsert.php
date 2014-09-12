@@ -10,7 +10,7 @@
 				Nombre: <input type="text" name="nombre" autofocus required /></br>
 				e-mail: <input type="text" name="email" autofocus required /></br>
 				Asunto: <input type="text" name="asunto" autofocus required /></br>
-				Mensaje: <textarea name="mensaje" autofocus required></textarea>
+				Mensaje: <textarea name="texto" autofocus required></textarea>
 			</p>
 			<input type="submit" value="Enviar!" />
 		</form>

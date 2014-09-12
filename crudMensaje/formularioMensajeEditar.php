@@ -27,7 +27,7 @@
 					Nombre: <input type="text" name="nombre"  value="<?php echo $ObjMensaje->getNombre(); ?>" autofocus required /></br>
 					e-mail: <input type="text" name="email"  value="<?php echo $ObjMensaje->getEmail(); ?>" autofocus required /></br>
 					Asunto: <input type="text" name="asunto"  value="<?php echo $ObjMensaje->getAsunto(); ?>" autofocus required /></br>
-					Mensaje: <textarea name="mensaje" placeholder="<?php echo $ObjMensaje->getMensaje(); ?>" autofocus required></textarea></br>
+					Mensaje: <textarea name="texto" placeholder="<?php echo $ObjMensaje->getTexto(); ?>" autofocus required></textarea></br>
 				</p>
 				<a href="indexMensaje.php">Cancelar</a>
 				<input type="submit" value="Guardar" />
