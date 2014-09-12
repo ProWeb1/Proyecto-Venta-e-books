@@ -4,11 +4,14 @@ session_start();
 $UsuarioCollectorObj = new UsuarioCollector();
 switch($_GET['action']){
 	case 'login':{
-		foreach ($UsuarioCollectorObj->showUsuarios() as $c){
-			if($_REQUEST['username'] == $c->getNombre() && $_POST['password'] == $c->getContrasena())
-				$_SESSION['actualmente_ingresado'] = 1;	
-			else
+		foreach ($UsuarioCollectorObj->readUsuarios() as $c){
+			if($_REQUEST['username'] == $c->getNombreUsuario() && $_POST['password'] == $c->getContrasena()){
+				$_SESSION['actualmente_ingresado'] = 1;
+				$_SESSION['username'] = $c->getNombreUsuario();
+				$_SESSION['idUsuario'] = $c->getIdUsuario();
+			}else
 				$mensajeError = '<h3 class="animated bounceInDown">Usuario o Clave incorrectos.</h3>';
+				//echo $mensajeError;
 		}
 	}break;
 	case 'logout':{
@@ -16,7 +19,8 @@ switch($_GET['action']){
 		header('Location: login_logout.php');
 	}break;
 }
-?><?php if($_SESSION['actualmente_ingresado'] == 1){?>
+?>
+<?php if($_SESSION['actualmente_ingresado'] == 1){?>
 	<!DOCTYPE html>
 		<html class="no-js" lang="en">
 		<head>
@@ -42,7 +46,16 @@ switch($_GET['action']){
     		<div class="container" id="login-block">
 		    	<div class="row">		
 			    	<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
-					    <h3 class="animated bounceInDown"><a href="index.html">Continuar a eBBBOOKS</a></h3>
+			    		 <?php
+			    		 $nomUsu=$_SESSION['username'];
+					     echo"<h3 class='animated bounceInDown'><a href='index.php?nombreUsu=".$nomUsu."'>Continuar a eBBBOOKS</a></h3>";
+					    // echo "<td><a href='formularioAutorEditar.php?id=".$c->getIdAutor()."'>editar</a></td>";
+					    if ( $_SESSION['idUsuario'] == 1)
+					   	echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>';
+					    else 
+					    	echo '<h3 class="animated bounceInDown"><a href="perfil.php">Continuar a Perfil</a></h3>';
+					    
+					    ?>
 					</div>
 				</div>
 			</div>
@@ -50,6 +63,7 @@ switch($_GET['action']){
 		</body>
 		</html>	
 <?php } else { ?>
+
 	<form method="post" action="login_logout.php?action=login">
     <!DOCTYPE html>
 		<html class="no-js" lang="en">
@@ -77,7 +91,7 @@ switch($_GET['action']){
 					    <h3 class="animated bounceInDown">Ingresar</h3>	
 				       	<div class="login-box clearfix animated flipInY">
 					        <div class="login-logo">
-					       		<a href="index.html"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
+					       		<a href="index.php"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
 					        </div> 
 					        <hr>			        
 							<div class="login-form">	
@@ -87,7 +101,7 @@ switch($_GET['action']){
 							   		<button type="submit" class="btn btn-login">Ingresar</button> 
 								</form>	
 								<div class="login-links"> 
-							    	<a href="signup.htm">No tienes una cuenta? <strong>Reg&iacute;strate</strong> </a>
+							    	<a href="signup.php">No tienes una cuenta? <strong>Reg&iacute;strate</strong> </a>
 								</div>  
 					        </div> 
 						</div>
@@ -95,7 +109,7 @@ switch($_GET['action']){
 				</div>
 		    </div>
 		 	<footer class="container">     		
-				<p id="footer-text"><small>© 2014 <a href="index.html">eBBBOOKS.</a> All rights reserved.</small></p>     	
+				<p id="footer-text"><small>© 2014 <a href="index.php">eBBBOOKS.</a> All rights reserved.</small></p>     	
 			</footer>		
 		    <script src="js/jquery.min.js"></script>       
 			<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script> 
