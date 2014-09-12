@@ -9,6 +9,12 @@ $CarritoCollectorObj = new CarritoCollector();
 $EbookCollectorObj = new EbookCollector();
 $AutorCollectorObj = new AutorCollector();
 $total = 0;
+switch($_GET['accion']){
+  case 'del':{
+    echo 'se borrara el registro '.$_GET['id'];
+    $CarritoCollectorObj->deleteCarrito($idUsuario, $_GET['id']);
+  }break;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +42,7 @@ $total = 0;
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#about"> <img src= "images/logo/ebbbooks-logo.png"></a>
+            <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
         <?php
         	if($_SESSION['actualmente_ingresado'] == 1){
@@ -46,7 +52,7 @@ $total = 0;
             <ul class="nav navbar-nav navbar-right">  
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$usuario; ?></a></li>
               <li><span>|</span></li>
-              <li><a id "salida" href="" onclick="location.href='carrito.htm'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><a id "salida" href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
               <li><span>|</span></li>
               <li><a href="" onclick="location.href='#'"><i class="fa fa fa-search"></i></a></li>
             </ul>
@@ -56,7 +62,7 @@ $total = 0;
             <ul class="nav navbar-nav navbar-right">
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
               <li><span>|</span></li>
-              <li><a id "salida" href="" onclick="location.href='carrito.htm'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><a id "salida" href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
               <li><span>|</span></li>
               <li><a href="" onclick="location.href='#'"><i class="fa fa fa-search"></i></a></li>
             </ul>
@@ -112,9 +118,14 @@ $total = 0;
             echo '</div>';
             echo '<div class="product-price">'.$ebook->getprecio().'</div>';
             echo '<div class="product-removal">';
+            echo '<a href="carritoCompras.php?accion=del&id='.$ebook->getidEbook().'" class="remove-product">';
+            echo 'Remover';
+            echo '</a>';
+            /*
             echo '<button class="remove-product">';
             echo 'Remover';
             echo '</button>';
+            */
             echo '</div>';
             echo '<div class="product-line-price">'.$ebook->getprecio().'</div>';
             echo '</div>';
@@ -139,7 +150,9 @@ $total = 0;
                 <div class="totals-value" id="cart-total"><?php echo $total;?></div>
               </div>
             </div>
-            <button class="checkout">Confirmar</button>
+            <?php
+            echo '<a href="checkout.php?usuario='.$idUsuario.'" class="checkout">Confirmar</a>';
+            ?>
           </div>
         <!-- Final Carrito de Compras--> 
           <p><a class="btn btn-primary" href="#">Seguir Comprando</a></p>
