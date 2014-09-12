@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  	
@@ -27,26 +27,24 @@
 			       	</div> 
 			       	<hr>
 			       	<div class="login-form">
-			       		<form action="php/insertUsuario.php" method="post">     			
-						   	<input type="text" placeholder="Usuario" name="nombreUsuario" required="">
-							<input type="password" placeholder="Contrase&ntilde;a" name="contrasena" required="">  
+			       		<form action="signup.htm" method="get">     			
+						   	<input type="text" placeholder="Usuario" required="">
+								<input type="text" placeholder="Nombres" required="">
+								<input type="text" placeholder="Apellidos" required="">
+								<input type="text" placeholder="Pa&iacute;s" required="">
+								<div class="gender-radio"> 
+									<strong>G&eacute;nero:</strong></br></br>
+									Masculino<input type="radio" name="genero" value="M">
+									Femenino<input type="radio" name="genero" value="F">
+								</div>
+						   	<input type="email" placeholder="E-mail" required="">
+						   	<input type="password" placeholder="Contrase&ntilde;a" required="">  
 						   	<input type="password" placeholder="Confirmar contrase&ntilde;a" required="">  
-							<input type="text" placeholder="Nombres" name="nombre" required="">
-							<input type="text" placeholder="Apellidos" name="apellido" required="">
-							<input type="date" name="fechaNacimiento" requiered="">
-							<center><textarea type="text" name="infoUsuario" id="message" placeholder="Escribe algo acerca de ti..."></textarea></center></br>
-							<div class="gender-radio"> 
-								<strong>G&eacute;nero:</strong></br></br>
-								Masculino<input type="radio" name="genero" value="m">
-								Femenino<input type="radio" name="genero" value="f">
-							</div>
-						   	<input type="email" placeholder="E-mail" name="email" required="">
-							<input type="text" placeholder="Pa&iacute;s" name="pais" required="">
 						   	<label class="checkbox">
-        		                			<input type="checkbox" value="acepto">
-								<a href="/pdf/TerminosCondiciones.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
-							</label>
-						   	<input type="submit" class="btn btn-login" value="Reg&iacute;strame"> 
+        		                <input type="checkbox" value="option1">
+														<a href="/pdf/TerminosCondiciones.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
+								</label>
+						   	<button type="submit" class="btn btn-login">Reg&iacute;strame</button> 
 						</form>	
 						<div class="login-links"> 
 					        <a href="login_logout.php">Ya tienes una cuenta? <strong>Ingresa ahora!</strong></a>

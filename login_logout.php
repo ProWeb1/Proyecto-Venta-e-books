@@ -1,16 +1,14 @@
-﻿<?php
-include_once("php/UsuarioCollector.php");
+<?php
+include_once("UsuarioCollector.php");
 session_start();
 $UsuarioCollectorObj = new UsuarioCollector();
 switch($_GET['action']){
 	case 'login':{
-		foreach ($UsuarioCollectorObj->readUsuarios() as $c){
-			if($_REQUEST['username'] == $c->getNombreUsuario() && $_POST['password'] == $c->getContrasena()){
-				$_SESSION['actualmente_ingresado'] = 1;
-				$_SESSION['username'] = $c->getNombreUsuario();
-			}else
+		foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+			if($_REQUEST['username'] == $c->getNombre() && $_POST['password'] == $c->getContrasena())
+				$_SESSION['actualmente_ingresado'] = 1;	
+			else
 				$mensajeError = '<h3 class="animated bounceInDown">Usuario o Clave incorrectos.</h3>';
-				//echo $mensajeError;
 		}
 	}break;
 	case 'logout':{
@@ -18,8 +16,7 @@ switch($_GET['action']){
 		header('Location: login_logout.php');
 	}break;
 }
-?>
-<?php if($_SESSION['actualmente_ingresado'] == 1){?>
+?><?php if($_SESSION['actualmente_ingresado'] == 1){?>
 	<!DOCTYPE html>
 		<html class="no-js" lang="en">
 		<head>
@@ -46,7 +43,6 @@ switch($_GET['action']){
 		    	<div class="row">		
 			    	<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
 					    <h3 class="animated bounceInDown"><a href="index.html">Continuar a eBBBOOKS</a></h3>
-					    <h3 class="animated bounceInDown"><a href="perfil.php">Continuar a Perfil</a></h3>
 					</div>
 				</div>
 			</div>
@@ -54,7 +50,6 @@ switch($_GET['action']){
 		</body>
 		</html>	
 <?php } else { ?>
-
 	<form method="post" action="login_logout.php?action=login">
     <!DOCTYPE html>
 		<html class="no-js" lang="en">

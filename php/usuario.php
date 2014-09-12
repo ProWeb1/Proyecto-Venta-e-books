@@ -1,95 +1,51 @@
 <?php
-class Usuario
-{
-    private $idUsuario;
-    private $nombreUsuario;
-    private $contrasena;
-    private $foto;
-    private $nombre;
-    private $apellido;
-    private $fechaNacimiento;
-    private $infoUsuario;
-    private $genero;
-    private $email;
-    private $pais;
+	require_once 'conection.php';
+	class usuario {
+		private $codigo;
+		private $fk_persona;
+		private $fk_tarjeta;
+		private $clave;
+		const TABLA = 'usuario';
 
-    function __construct($idUsuario, $nombreUsuario, $contrasena, $foto, $nombre, $apellido, $fechaNacimiento, $infoUsuario, $genero, $email, $pais) {
-       self::setIdUsuario($idUsuario);
-       self::setNombreUsuario($nombreUsuario);
-       self::setContrasena($contrasena);
-       self::setFoto($foto);
-       self::setNombre($nombre);
-       self::setApellido($apellido);
-       self::setFechaNacimiento($fechaNacimiento);
-       self::setInfoUsuario($infoUsuario);
-       self::setGenero($genero);
-       self::setEmail($email);
-       self::setPais($pais);
-     }
-     function setIdUsuario($idUsuario){
-       $this->idUsuario = $idUsuario;
-     } 
-     function getIdUsuario(){
-       return $this->idUsuario;
-     } 
-     function setNombreUsuario($nombreUsuario){
-       $this->nombreUsuario = $nombreUsuario;
-     } 
-     function getNombreUsuario(){
-       return $this->nombreUsuario;
-     } 
-     function setContrasena($contrasena){
-       $this->contrasena = $contrasena;
-     } 
-     function getContrasena(){
-       return $this->contrasena;
-     } 
-     function setFoto($foto){
-       $this->foto = $foto;
-     } 
-     function getFoto(){
-       return $this->foto;
-     } 
-     function setNombre($nombre){
-       $this->nombre = $nombre;
-     } 
-     function getNombre(){
-       return $this->nombre;
-     } 
-     function setApellido($apellido){
-       $this->apellido = $apellido;
-     } 
-     function getApellido(){
-       return $this->apellido;
-     } 
-     function setfechaNacimiento($fechaNacimiento){
-       $this->fechaNacimiento = $fechaNacimiento;
-     } 
-     function getFechaNacimiento(){
-       return $this->fechaNacimiento;
-     } 
-     function setInfoUsuario($infoUsuario){
-       $this->infoUsuario = $infoUsuario;
-     } 
-     function getInfoUsuario(){
-       return $this->infoUsuario;
-     } 
-     function setGenero($genero){
-       $this->genero = $genero;
-     } 
-     function getGenero(){
-       return $this->genero;
-     } 
-     function setEmail($email){
-       $this->email = $email;
-     } 
-     function getEmail(){
-       return $this->email;
-     } 
-     function setPais($pais){
-       $this->pais = $pais;
-     } 
-     function getPais(){
-       return $this->pais;
-     } 
-}?>
+		function __construct($codigo, $fk_persona, $fk_tarjeta, $clave){
+			$this->codigo = $codigo;
+			$this->fk_persona = $fk_persona;
+			$this->fk_tarjeta = $fk_tarjeta;
+			$this->clave = $clave;
+		}
+		
+		function getCodigo(){
+			return $this->codigo;
+		}
+
+		function getFk_persona(){
+			return $this->fk_persona;
+		}
+
+		function getFk_tarjeta(){
+			return $this->fk_tarjeta;
+		}
+
+		function getClave(){
+			return $this->clave;
+		}
+
+		function setCodigo($codigo){
+			$this->codigo= $codigo;
+		}
+
+		function setFk_persona($fk_persona){
+			$this->fk_persona = $fk_persona;
+		}
+
+		function setFk_tarjeta($fk_tarjeta){
+			$this->fk_tarjeta = $fk_tarjeta;
+		}
+
+		function setClave($clave){
+			$this->clave = $clave;
+		}
+
+	}
+
+?>
