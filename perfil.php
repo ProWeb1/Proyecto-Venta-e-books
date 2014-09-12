@@ -32,7 +32,9 @@ if($_SESSION['actualmente_ingresado'] == 1){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
+            <?php
+           echo" <a class='navbar-brand' href='index.php?nombreUsu=".$usuario."'> <img src= 'images/logo/ebbbooks-logo.png'></a>";
+            ?>
           </div>
         
         <!-- Navegación-->

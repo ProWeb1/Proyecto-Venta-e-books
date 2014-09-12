@@ -1,7 +1,5 @@
 ﻿<?php  
-session_start();
-$usuario = $_SESSION["username"];
-$idUsuario = $_SESSION['idUsuario'];
+$nombreUsu=$_GET["nombreUsu"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -56,11 +54,9 @@ $idUsuario = $_SESSION['idUsuario'];
         <!-- Navegación-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <?php
-          if($_SESSION['actualmente_ingresado'] == 1){
+          if($nombreUsu<>""){
         ?>
            <ul class="nav navbar-nav navbar-right">
-            <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$usuario; ?></a></li>
-            <li><span>|</span></li>
             <li><a href="#about">Nosotros</a></li>
             <li><span>|</span></li>
             <li><a href="#work">Catálogo</a></li>
@@ -68,6 +64,8 @@ $idUsuario = $_SESSION['idUsuario'];
             <li><a href="#noticias">Noticias</a></li>
             <li><span>|</span></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><span>|</span></li>
+            <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$nombreUsu; ?></a></li>
             <li><span>|</span></li>
             <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
           </ul>

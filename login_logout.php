@@ -46,8 +46,10 @@ switch($_GET['action']){
     		<div class="container" id="login-block">
 		    	<div class="row">		
 			    	<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
-					    <h3 class="animated bounceInDown"><a href="index.html">Continuar a eBBBOOKS</a></h3>
-					     <?php
+			    		 <?php
+			    		 $nomUsu=$_SESSION['username'];
+					     echo"<h3 class='animated bounceInDown'><a href='index.php?nombreUsu=".$nomUsu."'>Continuar a eBBBOOKS</a></h3>";
+					    // echo "<td><a href='formularioAutorEditar.php?id=".$c->getIdAutor()."'>editar</a></td>";
 					    if ( $_SESSION['idUsuario'] == 1)
 					   	echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>';
 					    else 
@@ -89,7 +91,7 @@ switch($_GET['action']){
 					    <h3 class="animated bounceInDown">Ingresar</h3>	
 				       	<div class="login-box clearfix animated flipInY">
 					        <div class="login-logo">
-					       		<a href="index.html"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
+					       		<a href="index.php"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
 					        </div> 
 					        <hr>			        
 							<div class="login-form">	
@@ -107,7 +109,7 @@ switch($_GET['action']){
 				</div>
 		    </div>
 		 	<footer class="container">     		
-				<p id="footer-text"><small>© 2014 <a href="index.html">eBBBOOKS.</a> All rights reserved.</small></p>     	
+				<p id="footer-text"><small>© 2014 <a href="index.php">eBBBOOKS.</a> All rights reserved.</small></p>     	
 			</footer>		
 		    <script src="js/jquery.min.js"></script>       
 			<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script> 
