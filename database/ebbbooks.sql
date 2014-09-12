@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Sep 12, 2014 at 06:16 AM
+-- Generation Time: Sep 12, 2014 at 04:40 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -223,7 +223,7 @@ INSERT INTO `ebook` VALUES (24, 23, 'The Book of Life', 'Espa&ntilde;ol', '06700
 INSERT INTO `ebook` VALUES (25, 24, 'The Left Hand of God', 'Espa&ntilde;ol', '0718155181', 'Michael Joseph', 436, 'Ana Valencia', 7.44, 'Ficci&oacute;n', 'images/portadas/25.jpg', NULL, 'pdf/25.pdf');
 INSERT INTO `ebook` VALUES (26, 25, 'The Darkest Part of the Forest', 'Espa&ntilde;ol', '0316213071', 'Little, Brown & Company', 336, 'Rafael Ram&iacute;rez', 9.99, 'Ficci&oacute;n', 'images/portadas/26.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (27, 4, 'The Name of the Wind', 'Espa&ntilde;ol', '0756404075', 'Penguin Group', 662, 'Marina Duarte', 4.99, 'Ficci&oacute;n', 'images/portadas/27.jpg', NULL, 'pdf/27.pdf');
-INSERT INTO `ebook` VALUES (28, 26, 'The Replacement', 'Espa&ntilde;ol', '1595143378', 'Penguin Group', 343, 'Rafael Ram&iacute;rez', 7.69, 'Ficci&oacute;n', 'images/portadas/28.png', NULL, 'pdf/dumb.pdf');
+INSERT INTO `ebook` VALUES (28, 26, 'The Replacement', 'Espa&ntilde;ol', '1595143378', 'Penguin Group', 343, 'Rafael Ram&iacute;rez', 7.69, 'Ficci&oacute;n', 'images/portadas/28.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (29, 21, 'The Ocean at the End of the Lane ', 'Espa&ntilde;ol', '0062255657', 'William Morrow Books', 181, 'Enrique Gallegos', 7.99, 'Ficci&oacute;n', 'images/portadas/29.jpg', NULL, 'pdf/29.pdf');
 INSERT INTO `ebook` VALUES (30, 27, 'The Falconer ', 'Espa&ntilde;ol', '1452114234', 'Chronicle Books', 378, 'Ana Valencia', 9.99, 'Ficci&oacute;n', 'images/portadas/30.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (31, 28, 'Sublime', 'Espa&ntilde;ol', '1481413708', 'Simon & Schuster', 336, 'Luis Calle', 9.78, 'Ficci&oacute;n', 'images/portadas/31.jpg', NULL, 'pdf/dumb.pdf');
@@ -256,7 +256,7 @@ CREATE TABLE `mensaje` (
   `nombre` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `asunto` varchar(50) default NULL,
-  `mensaje` text NOT NULL,
+  `texto` text NOT NULL,
   PRIMARY KEY  (`idMensaje`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
@@ -264,7 +264,7 @@ CREATE TABLE `mensaje` (
 -- Dumping data for table `mensaje`
 -- 
 
-INSERT INTO `mensaje` VALUES (1, 'Ray', 'ray@123.com', 'nada', 'Yo!');
+INSERT INTO `mensaje` VALUES (1, 'Ray', 'ray@123.com', 'nada', 'Alcaesto');
 INSERT INTO `mensaje` VALUES (2, 'Kimiko', 'k9@tokyo.com', 'hello', 'moshi moshi');
 INSERT INTO `mensaje` VALUES (3, 'Clay', 'cowboy@texas.com', 'Howdy', 'partner');
 INSERT INTO `mensaje` VALUES (4, 'Ohmi', 'xaolin@me.com', 'Greetings', 'Greetings stranger.');
@@ -287,7 +287,7 @@ CREATE TABLE `usuario` (
   `apellido` varchar(45) NOT NULL,
   `fechaNacimiento` date NOT NULL,
   `infoUsuario` text,
-  `genero` varchar(45) NOT NULL,
+  `genero` varchar(1) NOT NULL,
   `email` varchar(45) NOT NULL,
   `pais` varchar(45) NOT NULL,
   PRIMARY KEY  (`idUsuario`)
@@ -297,9 +297,9 @@ CREATE TABLE `usuario` (
 -- Dumping data for table `usuario`
 -- 
 
-INSERT INTO `usuario` VALUES (1, 'administrador', 'Pa$$w0rd', 'images/perfil/deafult.jpg', 'Admin', 'Ebbbooks', '1989-08-03', 'Soy Admin', 'f', 'admin@gmail.com', 'Ecuador');
-INSERT INTO `usuario` VALUES (2, 'connantrutman', 'connanmismo', 'images/perfil/deafult.jpg', 'Connan', 'Trutman', '1980-05-23', 'asdasd', 'm', 'connanmismo@hotmail.com', 'Ecuador');
-INSERT INTO `usuario` VALUES (3, 'jonathan92', 'venga', 'images/perfil/deafult.jpg', 'Jonathan', 'Lopez', '1983-10-08', 'Soy un usuario de Prueba', 'm', 'jonathan92@gmail.com', 'Ecuador');
+INSERT INTO `usuario` VALUES (1, 'administrador', 'Pa$$w0rd', 'images/perfil/default.jpg', 'Admin', 'Ebbbooks', '1989-08-03', 'Soy Admin', 'f', 'admin@gmail.com', 'Ecuador');
+INSERT INTO `usuario` VALUES (2, 'connantrutman', 'connanmismo', 'images/perfil/default.jpg', 'Connan', 'Trutman', '1980-05-23', 'asdasd', 'm', 'connanmismo@hotmail.com', 'Ecuador');
+INSERT INTO `usuario` VALUES (3, 'jonathan92', 'venga', 'images/perfil/default.jpg', 'Jonathan', 'Lopez', '1983-10-08', 'Soy un usuario de Prueba', 'm', 'jonathan92@gmail.com', 'Ecuador');
 
 -- 
 -- Constraints for dumped tables
