@@ -9,8 +9,17 @@
 	?>
 	<body>
 		<div id="main">
-			<table>
-				<tr><td><a href="formularioCabeceraInsert.php">Nueva Cabecera</a></td></tr>
+			
+				<a href="formularioCabeceraInsert.php">Nueva Cabecera</a></br>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Usuario</th>
+							<th>Fecha</th>
+							<th>Total</th>
+						</tr>
+					</thead>
 					<?php
 						foreach ($CabeceraCollectorObj->readCabeceras() as $c){
 						  $tmpUsuario = $UsuarioCollectorObj->showUsuario($c->getUsuario());
@@ -25,6 +34,7 @@
 						}
 					?>
 				</table>
+				</br><a href="../perfilAdmin.php">Regresar al Administrador</a></br>
 		</div>
 	</body>
 </html>
