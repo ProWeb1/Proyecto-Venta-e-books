@@ -68,6 +68,8 @@ $nombreUsu=$_GET["nombreUsu"];
             <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$nombreUsu; ?></a></li>
             <li><span>|</span></li>
             <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
+            <li><span>|</span></li>
+            <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
           </ul>
         <?php }else{?>
           <ul class="nav navbar-nav navbar-right">
@@ -82,6 +84,8 @@ $nombreUsu=$_GET["nombreUsu"];
             <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
             <li><span>|</span></li>
             <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
+            <li><span>|</span></li>
+            <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
           </ul>
         <?php } ?>
           </div><!-- /.navbar-baja -->
@@ -122,27 +126,27 @@ de e-books en el idioma castellano y crear una cultura ecológica basado en la c
 			<div class="main">
 				<div id="mi-slider" class="mi-slider">
           <ul>
-            <li><a href="categorias.html"><img src="images/slider/1.jpg" alt="img01"><h4>Fantasía</h4></a></li>
-            <li><a href="categorias.html"><img src="images/slider/2.jpg" alt="img02"><h4>Ficción</h4></a></li>
-            <li><a href="categorias.html"><img src="images/slider/3.jpg" alt="img03"><h4>Drama</h4></a></li>
-            <li><a href="categorias.html"><img src="images/slider/4.jpg" alt="img04"><h4>Suspenso</h4></a></li>
+            <li><a href="fantasia.php"><img src="images/slider/1.jpg" alt="img01"><h4>Fantasía</h4></a></li>
+            <li><a href="ficcion.php"><img src="images/slider/2.jpg" alt="img02"><h4>Ficción</h4></a></li>
+            <li><a href="categorias.php"><img src="images/slider/3.jpg" alt="img03"><h4>Drama</h4></a></li>
+            <li><a href="categorias.php"><img src="images/slider/4.jpg" alt="img04"><h4>Suspenso</h4></a></li>
           </ul>
           <ul>
-            <li><a href="autores.html"><img src="images/slider/5.jpg" alt="img05"><h4>J. K. Rowling</h4></a></li>
-            <li><a href="autores.html"><img src="images/slider/6.jpg" alt="img06"><h4>Marc Levy</h4></a></li>
-            <li><a href="autores.html"><img src="images/slider/7.jpg" alt="img07"><h4>Marissa Meyer</h4></a></li>
-            <li><a href="autores.html"><img src="images/slider/8.jpg" alt="img08"><h4>Lauren Kate</h4></a></li>
+            <li><a href="autores.php"><img src="images/slider/5.jpg" alt="img05"><h4>J. K. Rowling</h4></a></li>
+            <li><a href="autores.php"><img src="images/slider/6.jpg" alt="img06"><h4>Marc Levy</h4></a></li>
+            <li><a href="autores.php"><img src="images/slider/7.jpg" alt="img07"><h4>Marissa Meyer</h4></a></li>
+            <li><a href="autores.php"><img src="images/slider/8.jpg" alt="img08"><h4>Lauren Kate</h4></a></li>
           </ul>
           <ul>
-            <li><a href="novedades.html"><img src="images/slider/9.jpg" alt="img09"><h4>Reckoning</h4></a></li>
-            <li><a href="novedades.html"><img src="images/slider/10.jpg" alt="img10"><h4>Plus One</h4></a></li>
-            <li><a href="novedades.html"><img src="images/slider/11.jpg" alt="img11"><h4>Memorias</h4></a></li>
+            <li><a href="novedades.php"><img src="images/slider/9.jpg" alt="img09"><h4>Reckoning</h4></a></li>
+            <li><a href="novedades.php"><img src="images/slider/10.jpg" alt="img10"><h4>Plus One</h4></a></li>
+            <li><a href="novedades.php"><img src="images/slider/11.jpg" alt="img11"><h4>Memorias</h4></a></li>
           </ul>
           <ul>
-            <li><a href="topVentas.html"><img src="images/slider/12.jpg" alt="img12"><h4>Broken Stars</h4></a></li>
-            <li><a href="topVentas.html"><img src="images/slider/13.jpg" alt="img13"><h4>The Falconer</h4></a></li>
-            <li><a href="topVentas.html"><img src="images/slider/14.jpg" alt="img14"><h4>The Ring</h4></a></li>
-            <li><a href="topVentas.html"><img src="images/slider/15.jpg" alt="img15"><h4>WinterSpell</h4></a></li>
+            <li><a href="topVentas.php"><img src="images/slider/12.jpg" alt="img12"><h4>Broken Stars</h4></a></li>
+            <li><a href="topVentas.php"><img src="images/slider/13.jpg" alt="img13"><h4>The Falconer</h4></a></li>
+            <li><a href="topVentas.php"><img src="images/slider/14.jpg" alt="img14"><h4>The Ring</h4></a></li>
+            <li><a href="topVentas.php"><img src="images/slider/15.jpg" alt="img15"><h4>WinterSpell</h4></a></li>
           </ul>
           <nav>
             <a href="#">Categorias</a>
