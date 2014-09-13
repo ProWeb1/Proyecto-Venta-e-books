@@ -7,8 +7,17 @@
 	?>
 	<body>
 		<div id="main">
-			<table>
-				<tr><td><a href="formularioMensajeInsert.php">Nuevo Mensaje</a></td></tr>
+				<a href="formularioMensajeInsert.php">Nuevo Mensaje</a></br>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Email</th>
+							<th>Asunto</th>
+							<th>Texto</th>
+						</tr>
+					</thead>
 					<?php
 						foreach ($MensajeCollectorObj->readMensajes() as $c){
 						  echo "<tr>";
@@ -23,6 +32,7 @@
 						}
 					?>
 				</table>
+				</br><a href="../perfilAdmin.php">Regresar al Administrador</a></br>
 		</div>
 	</body>
 </html>

@@ -73,14 +73,16 @@ if($_SESSION['actualmente_ingresado'] == 1){
    </div>
    <div class="col-md-2 col-sm-3 col-xs-6">
 <p>Factura</p>
-   <a href="crudFactura/indexFactura.php" onclick="location.href='login.htm'"><i class="fa fa-user fa-5x pull-left fa-border"></i></a>
+   <a href="crudFactura/indexFactura.php" onclick="location.href='login.htm'"><i class="fa fa-usd fa-5x pull-left fa-border"></i></a>
     
    </div>
-   <div class="col-md-2 col-sm-3 col-xs-6">
-<p>DUMB TEXT</p>
-  <a href="crudUsuario/indexUsuario.php " onclick="location.href='login.htm'"><i class="fa fa-user fa-5x pull-left fa-border"></i></a>
+
+    <div class="col-md-2 col-sm-3 col-xs-6">
+<p>Mensaje</p>
+   <a href="crudMensaje/indexMensaje.php" onclick="location.href='login.htm'"><i class="fa fa-envelope fa-5x pull-left fa-border"></i></a>
     
    </div>
+
    <div class="col-md-2 col-sm-3 col-xs-6">
 <p>Usuario</p>
    <a href="crudUsuario/indexUsuario.php " onclick="location.href='login.htm'"><i class="fa fa-user fa-5x pull-left fa-border"></i></a>
