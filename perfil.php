@@ -87,20 +87,22 @@ include_once("UsuarioCollector.php");
 	$aux7 = $a->getEmail();
 	$aux8 = $a->getPais();
 	
-	if ($aux6 == f)
+	if ($aux6 == f){
 		$genero = 'Femenino';
-	else
+    $icono = '<i class="fa fa-female"></i>';
+	} else{
 		$genero = 'Masculino';
-
+    $icono = '<i class="fa fa-male"></i>';
+  }
        echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';	
        echo  '<h2>'.$aux2.' '.$aux3.'</h2>'; 
        echo '<div class="contact-info text-center">
             	<div class="row">
               		<div class="col-xs-12 col-sm-12">
-                		<p><strong>Fecha de Nacimiento: </strong>'.$aux4.'</p>
-                		<p><strong>G&eacute;nero: </strong>'.$genero.'</p>
-                		<p><strong>Correo: </strong>'.$aux7.'</a></p>
-				<p><strong>Pa&iacute;s: </strong>'.$aux8.'</a></p>
+                		<p><i class="fa fa-calendar-o"></i> '.$aux4.'</p>
+                		<p>'.$icono.' '.$genero.'</p>
+                		<p><i class="fa fa-envelope"></i> '.$aux7.'</p>
+				            <p><i class="fa fa-map-marker"> '.$aux8.'</a></p>
 				</br>
 				<center><p><a class="btn btn-primary" href="perfilEditable.php">Editar Perfil</a></p></center>
               		</div>
