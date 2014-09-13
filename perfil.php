@@ -101,7 +101,7 @@ include_once("UsuarioCollector.php");
               		<div class="col-xs-12 col-sm-12">
                 		<p><i class="fa fa-calendar-o"></i> '.$aux4.'</p>
                 		<p>'.$icono.' '.$genero.'</p>
-                		<p><i class="fa fa-envelope"></i> '.$aux7.'</p>
+                		<p><i class="fa fa-at"></i> '.$aux7.'</p>
 				            <p><i class="fa fa-map-marker"> '.$aux8.'</a></p>
 				</br>
 				<center><p><a class="btn btn-primary" href="perfilEditable.php">Editar Perfil</a></p></center>

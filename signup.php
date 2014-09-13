@@ -23,7 +23,7 @@
 			    <h3 class="animated bounceInDown">Reg&iacute;strate</h3>
 			    <div class="login-box clearfix animated flipInY">
 			       	<div class="login-logo">
-			       		<a href="index.html"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
+			       		<a href="index.php"><img src="images/logo/ebbbooks-logo.png" alt="eBBBOOKS logo"></a>
 			       	</div> 
 			       	<hr>
 			       	<div class="login-form">
@@ -43,7 +43,7 @@
 						   	<input type="email" placeholder="E-mail" name="email" required="">
 							<input type="text" placeholder="Pa&iacute;s" name="pais" required="">
 						   	<label class="checkbox">
-        		                			<input type="checkbox" value="acepto">
+        		               <input type="checkbox" value="acepto" required="">
 								<a href="pdf/T-P.pdf"> Acepto los t&eacute;rminos y condiciones.</a>
 							</label>
 						   	<input type="submit" class="btn btn-login" value="Reg&iacute;strame"> 
@@ -57,7 +57,7 @@
 		</div>
     </div>
     <footer class="container">
-     	<p id="footer-text"><small>© 2014 <a href="index.html">eBBBOOKS.</a> All rights reserved.</small></p>
+     	<p id="footer-text"><small>© 2014 <a href="index.php">eBBBOOKS.</a> All rights reserved.</small></p>
     </footer>
     <script src="js/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script> 
