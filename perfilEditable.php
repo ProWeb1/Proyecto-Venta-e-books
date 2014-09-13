@@ -38,11 +38,11 @@ if($_SESSION['actualmente_ingresado'] == 1){
         <!-- Navegación-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">  
-              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$usuario; ?>
-		  </a>
-	      </li>
+              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$usuario; ?></a></li>
               <li><span>|</span></li>
               <li><a id "salida" href="" onclick="location.href='carrito.htm'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><span>|</span></li>
+              <li><a id "salida" href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
             </ul>
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->
