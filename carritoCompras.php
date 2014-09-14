@@ -1,6 +1,6 @@
 <?php  
 include_once("CarritoCollector.php");
-include_once("ANALI EBOOK/EbookCollector.php");
+include_once("crudEbook/EbookCollector.php");
 include_once("AutorCollector.php");
 session_start();
 $usuario = $_SESSION["username"];
@@ -138,7 +138,7 @@ switch($_GET['accion']){
                 </div>
               </div>
               <?php
-                echo '<a href="checkout.php?id='.$idUsuario.'" class="checkout">Confirmar</a>';
+                echo '<a href="checkout.php?total='.$total.'" class="checkout">Confirmar</a>';
               ?>
             </div><!-- Final Carrito de Compras--> 
             <p><a class="btn btn-primary" href="#">Seguir Comprando</a></p>
