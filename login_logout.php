@@ -54,7 +54,6 @@ switch($_GET['action']){
 					   	echo '<h3 class="animated bounceInDown"><a href="perfilAdmin.php">Continuar a Perfil</a></h3>';
 					    else 
 					    	echo '<h3 class="animated bounceInDown"><a href="perfil.php">Continuar a Perfil</a></h3>';
-					    
 					    ?>
 					</div>
 				</div>
@@ -63,7 +62,6 @@ switch($_GET['action']){
 		</body>
 		</html>	
 <?php } else { ?>
-
 	<form method="post" action="login_logout.php?action=login">
     <!DOCTYPE html>
 		<html class="no-js" lang="en">

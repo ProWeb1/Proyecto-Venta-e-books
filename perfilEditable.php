@@ -15,16 +15,14 @@ if($_SESSION['actualmente_ingresado'] == 1){
     <!-- CSS -->
     <link href="css/stilo.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/biblio.css" rel="stylesheet">
-    		
+    <link href="css/biblio.css" rel="stylesheet">	
   </head>
   <body>
-  <div id="CajaGrande">
-    <!-- Imagen Grande para el Inicio -->
-    
-    <nav class="navbar navbar-inverse" role="navigation">
+    <div id="CajaGrande">
+      <!-- Imagen Grande para el Inicio -->
+      <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
-        <!-- Display Movil -->
+          <!-- Display Movil -->
           <div class="navbar-header">
           	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
@@ -34,8 +32,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
             </button>
             <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
-        
-        <!-- Navegación-->
+          <!-- Navegación-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">  
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$usuario; ?></a></li>
@@ -46,9 +43,8 @@ if($_SESSION['actualmente_ingresado'] == 1){
             </ul>
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->
-    </nav>
-    <!-- /Imagen grande Final -->
-     <!-- Introducción -->
+    </nav><!-- /Imagen grande Final -->
+    <!-- Introducción -->
     <div id="aboutMore" class="pagina">
       <div class="container">
 		    <div class="row">
@@ -57,183 +53,139 @@ if($_SESSION['actualmente_ingresado'] == 1){
 				      <h2 class="text-center">Perfil de Usuario</h2>	
 				      <span class="line-title"></span>
             </div>
-		      </div>
-        <!-- Final Columna -->
-		    </div>
-        <!-- Final Fila-->
+		      </div><!-- Final Columna -->
+		    </div><!-- Final Fila-->
 		  </div>
-
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-
           <!-- Start Left Side -->
-        <div class="col-xs-12 col-sm-3 text-center">
-          
-<?php
-
-include_once("UsuarioCollector.php");
-include_once("Usuario.php");
-       $nombrearray= array();
-       $nombreCollectorObj = new UsuarioCollector();
-       foreach ($nombreCollectorObj->showUsuarios() as $a){
-	$aux9 = $a->getIdUsuario();
-	$aux10 = $a->getNombreUsuario();
-	$aux11 = $a->getContrasena();
-	$aux2 = $a->getNombre(); 
-	$aux3 = $a->getApellido();
-	$aux4 = $a->getFechaNacimiento();
-	$aux5 = $a->getInfoUsuario();
-	$aux6 = $a->getGenero();
-	$aux7 = $a->getEmail();
-	$aux8 = $a->getPais();
-
-       echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';
-       echo '<form action="editarPerfil.php" method="post">
-		<p>
-		C&oacute;digo de Usuario: <input type="text" name="idUsuario"  value="'.$aux9.'" readonly />
-		</p>
-		<p>
-		Usuario: <input type="text" name="nombreUsuario"  value="'.$aux10.'" />
-		</p>
-		<p>
-		Contrase&ntilde;a: <input type="text" name="contrasena"  value="'.$aux11.'" />
-		</p>
-		<p>
-		Nombre: <input type="text" name="nombre"  value="'.$aux2.'" />
-		</p>
-		<p>
-		Apellido: <input type="text" name="apellido"  value="'.$aux3.'" />
-		</p>
-		<p>
-		Fecha de Nacimiento: <input type="date" name="fechaNacimiento"  value="'.$aux4.'" />
-		</p>
-		<p>
-		G&eacute;nero: <input type="text" name="genero"  value="'.$aux6.'" />
-		</p>
-		<p>
-		Correo: <input type="text" name="email"  value="'.$aux7.'" />
-		</p>
-		<p>
-		Pa&iacute;s: <input type="text" name="pais"  value="'.$aux8.'" />
-		</p>
-		<a href="perfil.php">Cancelar</a>
-		<input class="btn btn-primary" type="submit" value="Guardar" />
-	    </form>
-	</div>
-        <!-- End Left Side -->
-        <div class="clearfix visible-xs"></div>
-        <!-- Start Right Side -->
-        <div class="col-xs-12 col-sm-9">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-
-              <!-- Start About Me -->
-              <h2>Acerca de mi:</h2>
-	      <form action="editarPerfil.php" method="post" >
-              <p><input type="text" name="infoUsuario"  value="'.$aux5.'" /></p></form>
-              <!-- End About Me -->'; 
-	}
-?>
-              <!-- libros -->
-              <h2><a href="#work">Colecci&oacute;n Personal</a></h2>
-              <!-- final libros -->
+          <div class="col-xs-12 col-sm-3 text-center">
+            <?php
+              include_once("UsuarioCollector.php");
+              include_once("Usuario.php");
+              $nombrearray= array();
+              $nombreCollectorObj = new UsuarioCollector();
+              foreach ($nombreCollectorObj->showUsuarios() as $a){
+              	$aux9 = $a->getIdUsuario();
+              	$aux10 = $a->getNombreUsuario();
+              	$aux11 = $a->getContrasena();
+              	$aux2 = $a->getNombre(); 
+              	$aux3 = $a->getApellido();
+              	$aux4 = $a->getFechaNacimiento();
+               	$aux5 = $a->getInfoUsuario();
+               	$aux6 = $a->getGenero();
+               	$aux7 = $a->getEmail();
+               	$aux8 = $a->getPais();
+                echo '<img src="'.$aux1.'" class="img-responsive img-border" alt="" />';
+                echo '<form action="editarPerfil.php" method="post">
+                    		<p>C&oacute;digo de Usuario: <input type="text" name="idUsuario"  value="'.$aux9.'" readonly /></p>
+                     		<p>Usuario: <input type="text" name="nombreUsuario"  value="'.$aux10.'" /></p>
+                     		<p>Contrase&ntilde;a: <input type="text" name="contrasena"  value="'.$aux11.'" /></p>
+                     		<p>Nombre: <input type="text" name="nombre"  value="'.$aux2.'" /></p>
+                     		<p>Apellido: <input type="text" name="apellido"  value="'.$aux3.'" /></p>
+                     		<p>Fecha de Nacimiento: <input type="date" name="fechaNacimiento"  value="'.$aux4.'" /></p>
+                     		<p>G&eacute;nero: <input type="text" name="genero"  value="'.$aux6.'" /></p>
+                     		<p>Correo: <input type="text" name="email"  value="'.$aux7.'" /></p>
+                     		<p>Pa&iacute;s: <input type="text" name="pais"  value="'.$aux8.'" /></p>
+                     		<a href="perfil.php">Cancelar</a>
+                     		<input class="btn btn-primary" type="submit" value="Guardar" />
+                      </form>
+                    </div>
+                    <!-- End Left Side -->
+                    <div class="clearfix visible-xs">
+                    </div>
+                    <!-- Start Right Side -->
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                          <!-- Start About Me -->
+                          <h2>Acerca de mi:</h2>
+                  	      <form action="editarPerfil.php" method="post" >
+                            <p><input type="text" name="infoUsuario"  value="'.$aux5.'" /></p>
+                          </form>
+                          <!-- End About Me -->'; 
+              }
+            ?>
+            <!-- libros -->
+            <h2><a href="#work">Colecci&oacute;n Personal</a></h2>
+            <!-- final libros -->
             </div>
           </div>
-        </div>
-        <!-- End Right Side -->
-
+        </div><!-- End Right Side -->
         </div><!-- Final Columna -->		  
       </div><!-- Final Fila -->
     </div>
-
-
-     <!-- Catalogo -->
-     <div id="work" class="pagina">
-         <div class="container-fluid">
-  <div class="col-md-12 ">
-  <div class="gale">
-    
-<?
-
-include_once("ebooksElegidosCollector.php");
-
-       $arrayColeccion1= array();
-       $ColeccionCollectorObj = new ebooksElegidosCollector();
-       $directory="images/portadas";
-       $dirint = dir($directory);
-       foreach ($ColeccionCollectorObj->librosUsuario() as $a){
-        $aux1 = $a; 
-        array_push($arrayColeccion1, $aux1);
-       
-}
- 
-    while (($archivo = $dirint->read()) !== false){
-      if (eregi("gif", $archivo) || eregi("jpg", $archivo) || eregi("png", $archivo)){
-        $compara = ($directory."/".$archivo);
-      for($i = 0; $i < sizeof($arrayColeccion1);$i++){
-      if ($compara == $arrayColeccion1[$i]->getportada()){
-
-            echo '<div class="col-md-2 col-sm-3 col-xs-6">';
-  echo '<a href='.$arrayColeccion1[$i]->getenlace().'>';
-            echo '<img  class="img-responsive" src="'.$directory."/".$archivo.'">';
-      
-      
- echo '</a>';
-echo '</div>';
-}
-      }
-    }
-  }
- $dirint->close(); 
-?>
-</div>
-</div>
-</div>
-</div>
-    <!-- Footer -->
-    <footer class="bg-primary">
-      <div class="container">
-        <div class="row">
-			<div class="col-md-4 ">
-				<div class="constr cp-right">
-					<p>&copy; 2014 <a href="http://ebbbooks.com">eBBBOOKS</a>. All Rights Reserved. </p>
-				</div><!-- end contr -->
-			</div><!-- Final de Columna -->
-			<div class="col-md-4 text-center">
-			</div>
-			<div class="col-md-4 text-right">
-			<div class="contr">
-			<ul class="list-inline">
-			<li><a href="https://www.facebook.com/" class="socIcon" data-toggle="tooltip" title="Facebook" data-original-title="Facebook" data-gal='tooltip' data-placement="top"><i class="fa fa-facebook fa-2x"></i></a></li>
-			<li><a href="https://twitter.com/" class="socIcon" data-toggle="tooltip" title="Twitter" data-original-title="Twitter" data-gal='tooltip' data-placement="top"><i class="fa fa-twitter fa-2x"></i></a></li>
-			<li><a href="http://www.youtube.com/" class="socIcon" data-toggle="tooltip" title="Youtube" data-original-title="Youtube" data-gal='tooltip' data-placement="top"><i class="fa fa-youtube fa-2x"></i></a></li>
-			</ul>
-			</div>
-			</div>
+    <!-- Catalogo -->
+    <div id="work" class="pagina">
+      <div class="container-fluid">
+        <div class="col-md-12 ">
+          <div class="gale">
+            <?php
+            include_once("ebooksElegidosCollector.php");
+            $arrayColeccion1= array();
+            $ColeccionCollectorObj = new ebooksElegidosCollector();
+            $directory="images/portadas";
+            $dirint = dir($directory);
+            foreach ($ColeccionCollectorObj->librosUsuario() as $a){
+              $aux1 = $a; 
+              array_push($arrayColeccion1, $aux1);
+            }
+            while (($archivo = $dirint->read()) !== false){
+              if (eregi("gif", $archivo) || eregi("jpg", $archivo) || eregi("png", $archivo)){
+                $compara = ($directory."/".$archivo);
+                for($i = 0; $i < sizeof($arrayColeccion1);$i++){
+                  if ($compara == $arrayColeccion1[$i]->getportada()){
+                    echo '<div class="col-md-2 col-sm-3 col-xs-6">';
+                    echo '<a href='.$arrayColeccion1[$i]->getenlace().'>';
+                    echo '<img  class="img-responsive" src="'.$directory."/".$archivo.'">';
+                    echo '</a>';
+                    echo '</div>';
+                  }
+                }
+              }
+            }
+            $dirint->close(); 
+            ?>
         </div>
       </div>
-    </footer>
-    <!-- /Footer -->
-
-    <!-- JavaScript -->
-
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-   
-    <script src="js/modernizr.js"></script>
-    <script src="js/jquery.sticky.js" ></script>
-    <script src="js/jquery.quicksand.js" ></script>
-
-	  <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.scrollTo.js" ></script>
-    
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/script.js"></script>
-
-    <!-- Javascript para menu y srolling -->
-
+    </div>
   </div>
-  </body>
+  <!-- Footer -->
+  <footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+	   		<div class="col-md-4 ">
+		  		<div class="constr cp-right">
+			   		<p>&copy; 2014 <a href="http://ebbbooks.com">eBBBOOKS</a>. All Rights Reserved. </p>
+				  </div><!-- end contr -->
+			  </div><!-- Final de Columna -->
+			  <div class="col-md-4 text-center">
+			  </div>
+			  <div class="col-md-4 text-right">
+			    <div class="contr">
+			      <ul class="list-inline">
+        			<li><a href="https://www.facebook.com/" class="socIcon" data-toggle="tooltip" title="Facebook" data-original-title="Facebook" data-gal='tooltip' data-placement="top"><i class="fa fa-facebook fa-2x"></i></a></li>
+        			<li><a href="https://twitter.com/" class="socIcon" data-toggle="tooltip" title="Twitter" data-original-title="Twitter" data-gal='tooltip' data-placement="top"><i class="fa fa-twitter fa-2x"></i></a></li>
+        			<li><a href="http://www.youtube.com/" class="socIcon" data-toggle="tooltip" title="Youtube" data-original-title="Youtube" data-gal='tooltip' data-placement="top"><i class="fa fa-youtube fa-2x"></i></a></li>
+      			</ul>
+     			</div>
+     		</div>
+      </div>
+    </div>
+  </footer><!-- /Footer -->
+  <!-- JavaScript -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.sticky.js" ></script>
+  <script src="js/jquery.quicksand.js" ></script>
+  <script src="js/jquery.nav.js"></script>
+  <script src="js/jquery.scrollTo.js" ></script>
+  <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/script.js"></script>
+  <!-- Javascript para menu y srolling -->
+ </div>
+</body>
 </html>
 <?php } else {?>
 <!DOCTYPE html>
@@ -249,15 +201,13 @@ echo '</div>';
     <link href="css/stilo.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/biblio.css" rel="stylesheet">
-    		
   </head>
   <body>
-  <div id="CajaGrande">
-    <!-- Imagen Grande para el Inicio -->
-    
-    <nav class="navbar navbar-inverse" role="navigation">
+    <div id="CajaGrande">
+      <!-- Imagen Grande para el Inicio -->
+      <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
-        <!-- Display Movil -->
+          <!-- Display Movil -->
           <div class="navbar-header">
           	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
@@ -267,8 +217,7 @@ echo '</div>';
             </button>
             <a class="navbar-brand" href="index.html"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
-        
-        <!-- Navegación-->
+          <!-- Navegación-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">  
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
@@ -279,75 +228,61 @@ echo '</div>';
             </ul>
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->
-    </nav>
-    <!-- /Imagen grande Final -->
-     <!-- Introducción -->
-    <div id="aboutMore" class="pagina">
-      <div class="container">
-		    <div class="row">
-          <div class="col-md-10  col-md-offset-1">
-		        <div class="constr titulo-pag-blanca">
-				      <h2 class="text-center">OOPS!</h2>	
-				      <span class="line-title"></span>
-            </div>
-		      </div>
-        <!-- Final Columna -->
-		    </div>
-        <!-- Final Fila-->
-		  </div>
-
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-
-        <center>No tienes informaci&oacute;n en nuestra p&aacute;gina. <a href="signup.htm">Reg&iacute;strate ahora!</a></center>
-
-        </div><!-- Final Columna -->		  
-      </div><!-- Final Fila -->
-    </div>
-   </div>
-    <!-- Footer -->
-    <footer class="bg-primary">
-      <div class="container">
+      </nav><!-- /Imagen grande Final -->
+      <!-- Introducción -->
+      <div id="aboutMore" class="pagina">
+        <div class="container">
+		      <div class="row">
+            <div class="col-md-10  col-md-offset-1">
+		          <div class="constr titulo-pag-blanca">
+				        <h2 class="text-center">OOPS!</h2>	
+				        <span class="line-title"></span>
+              </div>
+		        </div><!-- Final Columna -->
+  		    </div><!-- Final Fila-->
+  		  </div>
         <div class="row">
-			<div class="col-md-4 ">
-				<div class="constr cp-right">
-					<p>&copy; 2014 <a href="index.php">eBBBOOKS</a>. All Rights Reserved. </p>
-				</div><!-- end contr -->
-			</div><!-- Final de Columna -->
-			<div class="col-md-4 text-center">
-			</div>
-			<div class="col-md-4 text-right">
-			<div class="contr">
-			<ul class="list-inline">
-			<li><a href="https://www.facebook.com/" class="socIcon" data-toggle="tooltip" title="Facebook" data-original-title="Facebook" data-gal='tooltip' data-placement="top"><i class="fa fa-facebook fa-2x"></i></a></li>
-			<li><a href="https://twitter.com/" class="socIcon" data-toggle="tooltip" title="Twitter" data-original-title="Twitter" data-gal='tooltip' data-placement="top"><i class="fa fa-twitter fa-2x"></i></a></li>
-			<li><a href="http://www.youtube.com/" class="socIcon" data-toggle="tooltip" title="Youtube" data-original-title="Youtube" data-gal='tooltip' data-placement="top"><i class="fa fa-youtube fa-2x"></i></a></li>
-			</ul>
-			</div>
-			</div>
-        </div>
+          <div class="col-md-10 col-md-offset-1">
+            <center>No tienes informaci&oacute;n en nuestra p&aacute;gina. <a href="signup.htm">Reg&iacute;strate ahora!</a></center>
+          </div><!-- Final Columna -->		  
+        </div><!-- Final Fila -->
       </div>
-    </footer>
-    <!-- /Footer -->
-
-    <!-- JavaScript -->
-
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-   
-    <script src="js/modernizr.js"></script>
-    <script src="js/jquery.sticky.js" ></script>
-    <script src="js/jquery.quicksand.js" ></script>
-
-	  <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.scrollTo.js" ></script>
-    
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/script.js"></script>
-
-    <!-- Javascript para menu y srolling -->
-
-  </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-primary">
+        <div class="container">
+          <div class="row">
+			      <div class="col-md-4 ">
+				      <div class="constr cp-right">
+					      <p>&copy; 2014 <a href="index.php">eBBBOOKS</a>. All Rights Reserved. </p>
+				      </div><!-- end contr -->
+			      </div><!-- Final de Columna -->
+			      <div class="col-md-4 text-center">
+			      </div>
+			      <div class="col-md-4 text-right">
+			        <div class="contr">
+			          <ul class="list-inline">
+            			<li><a href="https://www.facebook.com/" class="socIcon" data-toggle="tooltip" title="Facebook" data-original-title="Facebook" data-gal='tooltip' data-placement="top"><i class="fa fa-facebook fa-2x"></i></a></li>
+            			<li><a href="https://twitter.com/" class="socIcon" data-toggle="tooltip" title="Twitter" data-original-title="Twitter" data-gal='tooltip' data-placement="top"><i class="fa fa-twitter fa-2x"></i></a></li>
+            			<li><a href="http://www.youtube.com/" class="socIcon" data-toggle="tooltip" title="Youtube" data-original-title="Youtube" data-gal='tooltip' data-placement="top"><i class="fa fa-youtube fa-2x"></i></a></li>
+           			</ul>
+         			</div>
+       			</div>
+          </div>
+        </div>
+      </footer><!-- /Footer -->
+      <!-- JavaScript -->
+      <script src="js/jquery-1.10.2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/modernizr.js"></script>
+      <script src="js/jquery.sticky.js" ></script>
+      <script src="js/jquery.quicksand.js" ></script>
+  	  <script src="js/jquery.nav.js"></script>
+      <script src="js/jquery.scrollTo.js" ></script>
+      <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+      <script src="js/script.js"></script>
+      <!-- Javascript para menu y srolling -->
+    </div>
   </body>
 </html>
 <?php } ?>
