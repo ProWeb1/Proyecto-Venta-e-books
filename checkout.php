@@ -33,7 +33,6 @@ $arrayCabecera = array();
 			$arrayCabecera = $cabeceraCollectorObj->readCabeceras();
 			$size = (count($arrayCabecera) - 1 );
 			$cabecera = $arrayCabecera[$size];
-			//****************************
 			foreach ($carritoCollectorObj->showCarritosPorUsuario($idUsuario) as $c) {
 				$ebook = $ebookCollectorObj->showEbooks($c->getEbook());
 				//AGREGAR EBOOKS A COLECCION DE USUARIO
@@ -43,9 +42,7 @@ $arrayCabecera = array();
 				$detalleCollectorObj->createDetalle($cabecera->getIdCabecera(), $linea, $ebook->getidEbook());
 				$linea++;
 			}
-			//$carritoCollectorObj->deleteAllCarritos($idUsuario);
-			//echo 'fecha = '.date('Y-m-d');
-			//print_r($cabecera);
+			$carritoCollectorObj->deleteAllCarritos($idUsuario);
 			?>
 			<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
 				<h3 class="animated bounceInDown"><center>Su compra se realizo con exito</br><a href="index.php">Regresar</a></center></h3>
