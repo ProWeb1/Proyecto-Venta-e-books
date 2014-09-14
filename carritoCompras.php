@@ -14,6 +14,9 @@ switch($_GET['accion']){
     //echo 'se borrara el registro '.$_GET['id'];
     $CarritoCollectorObj->deleteCarrito($idUsuario, $_GET['id']);
   }break;
+  case 'add':{
+    $CarritoCollectorObj->createCarrito($idUsuario, $_GET['id']);
+  }
 }
 ?>
 <!DOCTYPE html>

@@ -23,7 +23,7 @@ if ($c->getidEbook() == 4) {
                   <p align="justify">'.$c->getresena().'</p>
                    <br/>
                     <br/>
-                  <center><p><a class="btn btn-primary" href="#">COMPRA YA </a></p></center>
+                  <center><p><a class="btn btn-primary" href="carritoCompras.php?accion=add&id='.$c->getidEbook().'">COMPRA YA </a></p></center>
         </div>';
 }
 

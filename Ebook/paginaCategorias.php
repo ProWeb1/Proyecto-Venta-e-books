@@ -22,7 +22,7 @@ if ($c->getidEbook() <= 8) {
                   <Strong><p>'.$c->gettitulo().'</p></Strong>
                   <p>'.$c->getfk_autor().'</p>
                   <Strong><p>$'.$c->getprecio().'</p></Strong>
-                  <p><a class="btn btn-primary" href="#">COMPRA YA</a></p>
+                  <p><a class="btn btn-primary" href="carritoCompras.php?accion=add&id='.$c->getidEbook().'">COMPRA YA</a></p>
 		</div>';
     }
     else {
@@ -33,7 +33,7 @@ if ($c->getidEbook() <= 8) {
                   <Strong><p>'.$c->gettitulo().'</p></Strong>
                   <p>'.$c->getfk_autor().'</p>
                   <Strong><p>$'.$c->getprecio().'</p></Strong>
-                  <p><a class="btn btn-primary" href="#">COMPRA YA</a></p>
+                  <p><a class="btn btn-primary" href="carritoCompras.php?accion=add&id='.$c->getidEbook().'">COMPRA YA</a></p>
     </div>';
 
     }

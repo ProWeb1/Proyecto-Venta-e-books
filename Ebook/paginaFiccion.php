@@ -20,7 +20,7 @@ if (($c->getidEbook() >= 21) & ($c->getidEbook() <= 32)){
                 <Strong><p>'.$c->gettitulo().'</p></Strong>
                 <p>'.$c->getfk_autor().'</p>
                 <Strong><p>$'.$c->getprecio().'</p></Strong>
-                <p><a class="btn btn-primary" href="#">COMPRA YA</a></p>
+                <p><a class="btn btn-primary" href="carritoCompras.php?accion=add&id='.$c->getidEbook().'">COMPRA YA</a></p>
                 <br>
                 
 		</div>';
