@@ -1,4 +1,5 @@
-﻿<?php  
+<?php
+session_start();
 $nombreUsu=$_GET["nombreUsu"];
 ?>
 <!DOCTYPE html>
@@ -45,21 +46,21 @@ $nombreUsu=$_GET["nombreUsu"];
             </button>
             <a class="navbar-brand" href="#about"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
-          <!-- Navegación-->
+          <!-- Navegaci&oacute;n-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <?php
-              if($nombreUsu<>""){
+              if($_SESSION['actualmente_ingresado'] == 1){
             ?>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#about">Nosotros</a></li>
               <li><span>|</span></li>
-              <li><a href="#work">Catálogo</a></li>
+              <li><a href="#work">Cat&aacute;logo</a></li>
               <li><span>|</span></li>
               <li><a href="#noticias">Noticias</a></li>
               <li><span>|</span></li>
               <li><a href="#contacto">Contacto</a></li>
               <li><span>|</span></li>
-              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$nombreUsu; ?></a></li>
+              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$_SESSION["username"]; ?></a></li>
               <li><span>|</span></li>
               <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
               <li><span>|</span></li>
@@ -69,7 +70,7 @@ $nombreUsu=$_GET["nombreUsu"];
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#about">Nosotros</a></li>
               <li><span>|</span></li>
-              <li><a href="#work">Catálogo</a></li>
+              <li><a href="#work">Cat&aacute;logo</a></li>
               <li><span>|</span></li>
               <li><a href="#noticias">Noticias</a></li>
               <li><span>|</span></li>
@@ -85,7 +86,7 @@ $nombreUsu=$_GET["nombreUsu"];
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->
       </nav><!-- /Imagen grande Final -->
-      <!-- Introducción -->
+      <!-- Introducci&oacute;n -->
       <div id="aboutMore" class="pagina">
         <div class="container">
 		      <div class="row">
@@ -100,9 +101,9 @@ $nombreUsu=$_GET["nombreUsu"];
         <div class="row">
            <div class="col-md-10 col-md-offset-1">
             <div class="constr about-content">
-              <p class="text-center"><strong>eBBBOOKS</strong> es una compañía que se encarga de 
-              la venta de traduccciones de e-books por medio de una plataforma en línea, con el objetivo de ampliar el repertorio 
-              de e-books en el idioma castellano y crear una cultura ecológica basado en la compra de e-books.</p>
+              <p class="text-center"><strong>eBBBOOKS</strong> es una compa&ntilde;&iacute;a que se encarga de 
+              la venta de traduccciones de e-books por medio de una plataforma en l&iacute;nea, con el objetivo de ampliar el repertorio 
+              de e-books en el idioma castellano y crear una cultura ecol&oacute;gica basado en la compra de e-books.</p>
             </div>
           </div><!-- end col -->
         </div><!-- end row -->
@@ -113,12 +114,12 @@ $nombreUsu=$_GET["nombreUsu"];
 		      <div class="row">
             <div class="col-md-10  col-md-offset-1">
 		          <div class="constr title-pag-ploma">
-				        <h2 class="text-center">Catálogo</h2>	
+				        <h2 class="text-center">Cat&aacute;logo</h2>	
 			          <div class="main">
 				          <div id="mi-slider" class="mi-slider">
                     <ul>
-                      <li><a href="fantasia.php"><img src="images/slider/1.jpg" alt="img01"><h4>Fantasía</h4></a></li>
-                      <li><a href="ficcion.php"><img src="images/slider/2.jpg" alt="img02"><h4>Ficción</h4></a></li>
+                      <li><a href="fantasia.php"><img src="images/slider/1.jpg" alt="img01"><h4>Fantas&iacute;a</h4></a></li>
+                      <li><a href="ficcion.php"><img src="images/slider/2.jpg" alt="img02"><h4>Ficci&oacute;n</h4></a></li>
                       <li><a href="categorias.php"><img src="images/slider/3.jpg" alt="img03"><h4>Drama</h4></a></li>
                       <li><a href="categorias.php"><img src="images/slider/4.jpg" alt="img04"><h4>Suspenso</h4></a></li>
                     </ul>
@@ -171,36 +172,36 @@ $nombreUsu=$_GET["nombreUsu"];
               <div class="flexslider">
                 <ul class="slides">
                   <li>
-                    <h2 class="text-center">Premio Azorín 2014</h2>
-                    <p class="text-justify">Ramón Pernas ha obtenido el Premio Azorín de Novela 2014 con la novela Hotel Paradiso . 
-                    El Jurado de este Premio hizo público el fallo en un acto celebrado en la ciudad de Alicante. </p>
-                    <p class="text-justify">El Jurado de esta XXXVIII edición está compuesto por Juan Bautista Roselló Tent, Diputado 
-                    de Cultura de la Diputación Provincial de Alicante, que actuó como Presidente; por los 
-                    escritores Juan Eslava Galán, Nativel Preciado, Almudena de Arteaga y Rafael Poveda Bernabé; 
-                    Concepción Lucas González, profesora de Lengua y Literatura Españolas; Belén López, directora
-                    de Editorial Planeta; y María José Argudo Poyatos, de la Diputación Provincial de Alicante,
-                    que actuó como Secretaria sin voto.</p>
+                    <h2 class="text-center">Premio Azor&iacute;n 2014</h2>
+                    <p class="text-justify">Ram&oacute;n Pernas ha obtenido el Premio Azor&iacute;n de Novela 2014 con la novela Hotel Paradiso . 
+                    El Jurado de este Premio hizo p&uacute;blico el fallo en un acto celebrado en la ciudad de Alicante. </p>
+                    <p class="text-justify">El Jurado de esta XXXVIII edici&oacute;n est&aacute; compuesto por Juan Bautista Rosell&oacute; Tent, Diputado 
+                    de Cultura de la Diputaci&oacute;n Provincial de Alicante, que actu&oacute; como Presidente; por los 
+                    escritores Juan Eslava Gal&aacute;n, Nativel Preciado, Almudena de Arteaga y Rafael Poveda Bernab&eacute;; 
+                    Concepci&oacute;n Lucas Gonz&aacute;lez, profesora de Lengua y Literatura Espa&ntilde;olas; Bel&eacute;n L&oacute;pez, directora
+                    de Editorial Planeta; y Mar&iacute;a Jos&eacute; Argudo Poyatos, de la Diputaci&oacute;n Provincial de Alicante,
+                    que actu&oacute; como Secretaria sin voto.</p>
                   </li>
                   <li>
-                    <h2 class="text-center">Eterna Ana María Matute</h2>
-                    <p class="text-justify">La muerte de la genial escritora Ana María Matute, el pasado miércoles, nos ha
-                    dejado con un río de condolencias, homenajes y epítetos. </p>
-                    <p class="text-justify">Una de las autoras más leídas y reconocidas de la literatura española, miembro 
-                    de la Real Academia de la Lengua, ha alcanzado los máximos reconocimientos: 
+                    <h2 class="text-center">Eterna Ana Mar&iacute;a Matute</h2>
+                    <p class="text-justify">La muerte de la genial escritora Ana Mar&iacute;a Matute, el pasado mi&eacute;rcoles, nos ha
+                    dejado con un r&iacute;o de condolencias, homenajes y ep&iacute;tetos. </p>
+                    <p class="text-justify">Una de las autoras m&aacute;s le&iacute;das y reconocidas de la literatura espa&ntilde;ola, miembro 
+                    de la Real Academia de la Lengua, ha alcanzado los m&aacute;ximos reconocimientos: 
                     Premio Cervantes, Premio Nacional de las Letras, Premio Planeta y Premio Nadal.</p>
-                    <p class="text-justify">En los últimos meses Ana María trabajó en su novela Demonios familiares, que había
-                    casi finalizado y que Ediciones Destino publicará en septiembre, tal como se planeo 
-                    con ella. Será su último legado.</p>                       
+                    <p class="text-justify">En los &uacute;ltimos meses Ana Mar&iacute;a trabaj&oacute; en su novela Demonios familiares, que hab&iacute;a
+                    casi finalizado y que Ediciones Destino publicar&aacute; en septiembre, tal como se planeo 
+                    con ella. Ser&aacute; su &uacute;ltimo legado.</p>                       
                   </li>
                   <li>
-                    <h2 class="text-center">Presentación y firma Circo Máximo</h2>
-                    <p class="text-justify">Circo Máximo es la historia de Trajano y su gobierno, guerras y traiciones, lealtades insobornables e historias de amor imposibles. Hay una vestal, un juicio, inocentes acusados, un abogado brillante, 
+                    <h2 class="text-center">Presentaci&oacute;n y firma Circo M&aacute;ximo</h2>
+                    <p class="text-justify">Circo M&aacute;ximo es la historia de Trajano y su gobierno, guerras y traiciones, lealtades insobornables e historias de amor imposibles. Hay una vestal, un juicio, inocentes acusados, un abogado brillante, 
                     mensajes cifrados, fortalezas inexpugnables, dos aurigas rivales, gladiadores y tres carreras
                     de cuadrigas. Hay un caballo especial, diferente a todos, leyes antiguas olvidadas, sacrificios 
-                    humanos, amargura y terror, pero también destellos de nobleza y esperanza, como la llama del 
-                    Templo de Vesta, que mientras arde, preserva a Roma. Sólo que algunas noches la llama tiembla.
+                    humanos, amargura y terror, pero tambi&eacute;n destellos de nobleza y esperanza, como la llama del 
+                    Templo de Vesta, que mientras arde, preserva a Roma. S&oacute;lo que algunas noches la llama tiembla.
                     La rueda de la Fortuna comienza entonces a girar. En esos momentos, todo es posible y hasta 
-                    la vida de Trajano puede correr peligro. Y, esto es lo mejor, ocurrió: hubo un complot 
+                    la vida de Trajano puede correr peligro. Y, esto es lo mejor, ocurri&oacute;: hubo un complot 
                     para asesinar a Marco Ulpio Trajano.</p>
                   </li>
                 </ul>
@@ -209,7 +210,7 @@ $nombreUsu=$_GET["nombreUsu"];
           </div><!-- Final de Columna -->
         </div><!-- Final de Fila -->
       </div><!--/Noticias-->
-      <!--Contáctenos-->
+      <!--Cont&aacute;ctenos-->
       <div id="contacto" class="container_wapper">
         <div class="container-fluid">
           <h1>Contacto</h1>
@@ -258,7 +259,7 @@ $nombreUsu=$_GET["nombreUsu"];
             </div>
           </form>
         </div>
-      </div><!--/Contáctenos-->
+      </div><!--/Cont&aacute;ctenos-->
       <!-- Footer -->
       <footer class="bg-primary">
         <div class="container">

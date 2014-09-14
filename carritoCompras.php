@@ -11,7 +11,7 @@ $AutorCollectorObj = new AutorCollector();
 $total = 0;
 switch($_GET['accion']){
   case 'del':{
-    echo 'se borrara el registro '.$_GET['id'];
+    //echo 'se borrara el registro '.$_GET['id'];
     $CarritoCollectorObj->deleteCarrito($idUsuario, $_GET['id']);
   }break;
 }
@@ -116,11 +116,6 @@ switch($_GET['accion']){
                   echo '<a href="carritoCompras.php?accion=del&id='.$ebook->getidEbook().'" class="remove-product">';
                   echo 'Remover';
                   echo '</a>';
-                  /*
-                  echo '<button class="remove-product">';
-                  echo 'Remover';
-                  echo '</button>';
-                  */
                   echo '</div>';
                   echo '<div class="product-line-price">'.$ebook->getprecio().'</div>';
                   echo '</div>';
@@ -143,7 +138,7 @@ switch($_GET['accion']){
                 </div>
               </div>
               <?php
-                echo '<a href="checkout.php?usuario='.$idUsuario.'" class="checkout">Confirmar</a>';
+                echo '<a href="checkout.php?id='.$idUsuario.'" class="checkout">Confirmar</a>';
               ?>
             </div><!-- Final Carrito de Compras--> 
             <p><a class="btn btn-primary" href="#">Seguir Comprando</a></p>

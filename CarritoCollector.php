@@ -28,14 +28,14 @@
 		}
 
 		function updateCarrito($fk_usuario, $fk_ebook){
-			$insertrow = self::$db->updateRow("UPDATE ebbbooks.carrito SET mensaje.fk_ebook = ? WHERE  mensaje.fk_usuario = ?" ,array($fk_ebook, $fk_usuario));
+			$insertrow = self::$db->updateRow("UPDATE ebbbooks.carrito SET carrito.fk_ebook = ? WHERE  carrito.fk_usuario = ?" ,array($fk_ebook, $fk_usuario));
 		}
 
 		function deleteCarrito($fk_usuario, $fk_ebook){
 			$deleterow = self::$db->deleteRow("DELETE FROM ebbbooks.carrito WHERE fk_usuario= ? AND fk_ebook= ?", array($fk_usuario, $fk_ebook));
 		}
 
-		function deleteAllMensajes($fk_usuario){
+		function deleteAllCarritos($fk_usuario){
 			$deleterow = self::$db->deleteRow("DELETE FROM ebbbooks.carrito WHERE fk_usuario= ?", array($fk_usuario));
 		}
 	}

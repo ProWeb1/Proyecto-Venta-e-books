@@ -90,7 +90,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
                            	<p><i class="fa fa-calendar-o"></i> '.$aux4.'</p>
                            	<p>'.$icono.' '.$genero.'</p>
                            	<p><i class="fa fa-envelope"></i> '.$aux7.'</p>
-                	          <p><i class="fa fa-map-marker"> '.$aux8.'</a></p>
+                	          <p><i class="fa fa-map-marker"> '.$aux8.'</i></p>
                 	          </br>
                 	          <center><p><a class="btn btn-primary" href="perfilEditable.php">Editar Perfil</a></p></center>
                          	</div>

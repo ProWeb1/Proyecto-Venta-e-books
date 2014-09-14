@@ -1,5 +1,4 @@
 <?php
-
 class Coleccion
 {
     private $fk_ebook;   
@@ -34,5 +33,4 @@ class Coleccion
      } 
    
 }
-
-?> 
+?>
