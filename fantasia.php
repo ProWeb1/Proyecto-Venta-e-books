@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -43,6 +46,21 @@
             <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
           <!-- Navegación-->
+          <?php
+              if($_SESSION['actualmente_ingresado'] == 1){
+          ?>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$_SESSION["username"]; ?></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa fa-sitemap"></i></a></li>
+            </ul>
+          </div>
+        <?php } else {?>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
@@ -52,6 +70,7 @@
               <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa fa-sitemap"></i></a></li>
             </ul>
           </div><!-- /.navbar-baja -->
+        <?php } ?>
         </div><!-- /.contenedor fluido-->
       </nav><!-- /Imagen grande Final -->
       <!-- Introducción -->

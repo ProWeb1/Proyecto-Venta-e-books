@@ -9,13 +9,15 @@ $CarritoCollectorObj = new CarritoCollector();
 $EbookCollectorObj = new EbookCollector();
 $AutorCollectorObj = new AutorCollector();
 $total = 0;
-switch($_GET['accion']){
-  case 'del':{
-    //echo 'se borrara el registro '.$_GET['id'];
-    $CarritoCollectorObj->deleteCarrito($idUsuario, $_GET['id']);
-  }break;
-  case 'add':{
-    $CarritoCollectorObj->createCarrito($idUsuario, $_GET['id']);
+if($_SESSION['actualmente_ingresado'] == 1){
+  switch($_GET['accion']){
+    case 'del':{
+      //echo 'se borrara el registro '.$_GET['id'];
+      $CarritoCollectorObj->deleteCarrito($idUsuario, $_GET['id']);
+    }break;
+    case 'add':{
+      $CarritoCollectorObj->createCarrito($idUsuario, $_GET['id']);
+    }
   }
 }
 ?>
@@ -57,7 +59,7 @@ switch($_GET['accion']){
                 <li><span>|</span></li>
                 <li><a id "salida" href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
                 <li><span>|</span></li>
-                <li><a href="" onclick="location.href='#'"><i class="fa fa fa-search"></i></a></li>
+                <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
               </ul>
             </div>
             <?php } else {?>
@@ -67,7 +69,7 @@ switch($_GET['accion']){
                 <li><span>|</span></li>
                 <li><a id "salida" href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
                 <li><span>|</span></li>
-                <li><a href="" onclick="location.href='#'"><i class="fa fa fa-search"></i></a></li>
+                <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
               </ul>
             </div><!-- /.navbar-baja -->
             <?php } ?>
@@ -85,6 +87,9 @@ switch($_GET['accion']){
   		        </div><!-- Final Columna -->
   		      </div><!-- Final Fila-->
   		    </div>
+          <?php
+            if($_SESSION['actualmente_ingresado'] == 1){
+          ?>
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
               <!-- Carrito de Compras -->
@@ -98,32 +103,32 @@ switch($_GET['accion']){
                 </div>
                 <!--Productos-->
                 <?php
-                foreach ($CarritoCollectorObj->showCarritosPorUsuario($idUsuario) as $c) {
-                  $ebook = $EbookCollectorObj->showEbooks($c->getEbook());
-                  $autor = $AutorCollectorObj->showAutor($ebook->getfk_autor());
-                  echo '<div class="product">';
-                  echo '<div class="product-image">';
-                  echo '<img src="'.$ebook->getportada().'">';
-                  echo '</div>';
-                  echo '<div class="product-details">';
-                  echo '<div class="product-title">'.$ebook->gettitulo().'</div>';
-                  echo '<p class="product-description">';
-                  echo '<strong>Autor:</strong> '.$autor->getnombreCompleto().' </br>';
-                  echo '<strong>ISBN:</strong> '.$ebook->getisbn().' </br>';
-                  echo '<strong>Formato:</strong> PDF </br>';
-                  echo '<strong>Idioma:</strong> '.$ebook->getidioma();
-                  echo '</p>';
-                  echo '</div>';
-                  echo '<div class="product-price">'.$ebook->getprecio().'</div>';
-                  echo '<div class="product-removal">';
-                  echo '<a href="carritoCompras.php?accion=del&id='.$ebook->getidEbook().'" class="remove-product">';
-                  echo 'Remover';
-                  echo '</a>';
-                  echo '</div>';
-                  echo '<div class="product-line-price">'.$ebook->getprecio().'</div>';
-                  echo '</div>';
-                  $total+=$ebook->getprecio();
-                }
+                  foreach ($CarritoCollectorObj->showCarritosPorUsuario($idUsuario) as $c) {
+                    $ebook = $EbookCollectorObj->showEbooks($c->getEbook());
+                    $autor = $AutorCollectorObj->showAutor($ebook->getfk_autor());
+                    echo '<div class="product">';
+                    echo '<div class="product-image">';
+                    echo '<img src="'.$ebook->getportada().'">';
+                    echo '</div>';
+                    echo '<div class="product-details">';
+                    echo '<div class="product-title">'.$ebook->gettitulo().'</div>';
+                    echo '<p class="product-description">';
+                    echo '<strong>Autor:</strong> '.$autor->getnombreCompleto().' </br>';
+                    echo '<strong>ISBN:</strong> '.$ebook->getisbn().' </br>';
+                    echo '<strong>Formato:</strong> PDF </br>';
+                    echo '<strong>Idioma:</strong> '.$ebook->getidioma();
+                    echo '</p>';
+                    echo '</div>';
+                    echo '<div class="product-price">'.$ebook->getprecio().'</div>';
+                    echo '<div class="product-removal">';
+                    echo '<a href="carritoCompras.php?accion=del&id='.$ebook->getidEbook().'" class="remove-product">';
+                    echo 'Remover';
+                    echo '</a>';
+                    echo '</div>';
+                    echo '<div class="product-line-price">'.$ebook->getprecio().'</div>';
+                    echo '</div>';
+                    $total+=$ebook->getprecio();
+                  }
                 ?>
                <!--/Productos-->
               <div class="totals">
@@ -144,9 +149,20 @@ switch($_GET['accion']){
                 echo '<a href="checkout.php?total='.$total.'" class="checkout">Confirmar</a>';
               ?>
             </div><!-- Final Carrito de Compras--> 
-            <p><a class="btn btn-primary" href="#">Seguir Comprando</a></p>
+            <p><a class="btn btn-primary" href="categorias.php">Seguir Comprando</a></p>
           </div><!-- Final Columna -->		  
         </div><!-- Final Fila -->
+        <?php } else {?>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <!-- Carrito de Compras -->
+              <div class="shopping-cart">
+                <h2 class="text-center">Necesitas ser un usuario de Ebbbooks para comprar</h2>
+              </div><!-- Final Carrito de Compras--> 
+            <p><a class="checkout" href="login_logout.php">Login</a></p>
+          </div><!-- Final Columna -->      
+        </div><!-- Final Fila -->
+        <?php } ?>
       </div>
       <!-- Footer -->
       <footer class="bg-primary">

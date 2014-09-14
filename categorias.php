@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
 	<link href='images/logo/ebbbooks-logo.ico' rel='shortcut icon' type='image/x-icon'>
@@ -58,17 +61,31 @@
         </div>
         
         <!-- Navegación-->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-         <ul class="nav navbar-nav navbar-right">
-            
-            <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
-            <li><span>|</span></li>
-            <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
-            <li><span>|</span></li>
-            <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa fa-sitemap"></i></a></li>
+        <?php
+              if($_SESSION['actualmente_ingresado'] == 1){
+          ?>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$_SESSION["username"]; ?></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa fa-sitemap"></i></a></li>
             </ul>
-          
-        </div><!-- /.navbar-baja -->
+          </div>
+        <?php } else {?>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
+              <li><span>|</span></li>
+              <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa fa-sitemap"></i></a></li>
+            </ul>
+          </div><!-- /.navbar-baja -->
+        <?php } ?>
         </div><!-- /.contenedor fluido-->
     </nav>
     <!-- /Imagen grande Final -->
