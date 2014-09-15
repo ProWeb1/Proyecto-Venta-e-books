@@ -47,4 +47,3 @@ class AutorCollector extends Collector
 
 }
 ?>
-
