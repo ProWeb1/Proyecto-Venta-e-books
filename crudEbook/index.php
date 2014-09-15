@@ -57,6 +57,7 @@ foreach ($EbookCollectorObj->readEbooks() as $c){
 
   </tbody>
 </table>
+</br><a href="../perfilAdmin.php">Regresar a Perfil de Administrador</a></br>
 
 </div>
 </body>

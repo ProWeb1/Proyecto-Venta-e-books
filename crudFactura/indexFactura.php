@@ -34,7 +34,7 @@
 						}
 					?>
 				</table>
-				</br><a href="../perfilAdmin.php">Regresar al Administrador</a></br>
+				</br><a href="../perfilAdmin.php">Regresar a Perfil de Administrador</a></br>
 		</div>
 	</body>
 </html>

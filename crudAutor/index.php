@@ -7,8 +7,15 @@ $AutorCollector = new AutorCollector();
 ?>
 <body>
 <div id="main">
+
+<a href="formularioAutorInsert.php">Nuevo</a>
 <table>
-<tr><td><a href="formularioAutorInsert.php">Nuevo</a></td></tr>
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>Nombre</th>
+	</tr>
+</thead>
 <?php
 foreach ($AutorCollector->readAutor() as $c){
   echo "<tr>";
@@ -20,6 +27,7 @@ foreach ($AutorCollector->readAutor() as $c){
 }
 ?>
 </table>
+</br><a href="../perfilAdmin.php">Regresar a Perfil de Administrador</a></br>
 </div>
 </body>
 </html>
