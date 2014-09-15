@@ -1,4 +1,5 @@
 <?php
+session_start();
 $valor1=$_POST["nombreUsuario"];
 $valor2=$_POST["contrasena"];
 $valor3="images/perfil/default.jpg";
@@ -13,7 +14,6 @@ include_once("UsuarioCollector.php");
 $UsuarioCollectorObj = new UsuarioCollector();
 $UsuarioCollectorObj->createUsuario($valor1,$valor2,$valor3,$valor4,$valor5,$valor6,$valor7,$valor8,$valor9,$valor10);
 echo "<script>alert('Has ingresado correctamente a nuestro sitio!');</script>";
-session_start();
 foreach ($UsuarioCollectorObj->readUsuarios() as $c){
 	if($_REQUEST['nombreUsuario'] == $c->getNombreUsuario() && $_POST['contrasena'] == $c->getContrasena()){
 		$_SESSION['actualmente_ingresado'] = 1;

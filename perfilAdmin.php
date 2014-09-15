@@ -53,7 +53,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
 		      </div><!-- Final Fila-->
 		    </div>
       <div class="row">
-        <div class="col-md-10  col-md-offset-1">    
+        <div class="col-md-10  col-md-offset-2">    
           <div class="col-md-2 col-sm-3 col-xs-6">
             <p>eBook</p>
             <a href="crudEbook/index.php" onclick="location.href='login.htm'"><i class="fa fa-book fa-5x pull-left fa-border"></i></a>
