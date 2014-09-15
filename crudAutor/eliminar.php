@@ -16,7 +16,7 @@ $AutorCollectorObj = new AutorCollector();
 $AutorCollectorObj->deleteAutor($id);
 
 // muestro mensaje de que se ha eliminado el objeto Demo
-echo "valor id". htmlspecialchars($id) ."  ha sido eliminado correctamente.";
+echo "Autor id". htmlspecialchars($id) ."  ha sido eliminado correctamente.";
 ?>
 <div><a href="index.php">Volver al Inicio</a></div>
 </div>
