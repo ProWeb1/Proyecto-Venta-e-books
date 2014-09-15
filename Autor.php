@@ -11,7 +11,6 @@ class Autor
        self::setIdAutor($idAutor);
        self::setnombreCompleto($nombreCompleto);
 	   self::setfoto($foto);
-	 
      }
     
      function setIdAutor($idAutor){

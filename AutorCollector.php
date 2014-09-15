@@ -41,9 +41,5 @@ class AutorCollector extends Collector
 
   function deleteAutor($id) {    
     $deleterow = self::$db->deleteRow("DELETE FROM ebbbooks.autor WHERE idAutor= ?", array("{$id}"));
-  }  
-
-
-
-}
+  }  }
 ?>
