@@ -23,6 +23,9 @@ Id: <input type="text" name="idAutor" value="<?php echo $ObjAutor->getIdAutor();
 <p>
 Nombre: <input type="text" name="nombreCompleto"  value="<?php echo $ObjAutor->getnombreCompleto(); ?>" autofocus required />
 </p>
+<p>
+Ruta de foto: <input type="text" name="foto"  value="<?php echo $ObjAutor->getFoto(); ?>" autofocus />
+</p>
 <a href="index.php">Cancelar</a>
 <input type="submit" value="Guardar" />
 

@@ -12,9 +12,9 @@ echo "Edici&oacute;n en proceso ....  </br>";
 
 include_once("AutorCollector.php");
 $AutorCollectorObj = new AutorCollector();
-$AutorCollectorObj->updateAutor($idAutor,$nombreCompleto);
+$AutorCollectorObj->updateAutor($idAutor,$nombreCompleto,$foto);
 
-echo "id :".$idAutor." actualizado a:".$nombreCompleto." </br>";
+echo "id :".$idAutor." actualizado a:".$nombreCompleto. " y ".$foto." </br>";
 ?>
 <div><a href="index.php">Volver al Inicio</a></div>
 </div>
