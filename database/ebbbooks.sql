@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Sep 12, 2014 at 04:40 PM
+-- Generation Time: Sep 15, 2014 at 01:21 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -87,7 +87,7 @@ CREATE TABLE `cabecera_factura` (
   `total_pagar` double NOT NULL,
   PRIMARY KEY  (`idCabecera`),
   KEY `fk_usuario` (`fk_usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 -- 
 -- Dumping data for table `cabecera_factura`
@@ -95,6 +95,7 @@ CREATE TABLE `cabecera_factura` (
 
 INSERT INTO `cabecera_factura` VALUES (2, 2, '2014-08-13', 12);
 INSERT INTO `cabecera_factura` VALUES (3, 3, '2014-08-08', 5);
+INSERT INTO `cabecera_factura` VALUES (17, 3, '2014-09-14', 11.38);
 
 -- --------------------------------------------------------
 
@@ -113,11 +114,7 @@ CREATE TABLE `carrito` (
 -- Dumping data for table `carrito`
 -- 
 
-INSERT INTO `carrito` VALUES (2, 5);
-INSERT INTO `carrito` VALUES (2, 15);
-INSERT INTO `carrito` VALUES (3, 8);
-INSERT INTO `carrito` VALUES (3, 14);
-INSERT INTO `carrito` VALUES (2, 28);
+INSERT INTO `carrito` VALUES (2, 2);
 
 -- --------------------------------------------------------
 
@@ -142,6 +139,7 @@ INSERT INTO `coleccion` VALUES (2, 6, 2);
 INSERT INTO `coleccion` VALUES (3, 4, 1);
 INSERT INTO `coleccion` VALUES (3, 16, 2);
 INSERT INTO `coleccion` VALUES (2, 35, 3);
+INSERT INTO `coleccion` VALUES (3, 14, 3);
 
 -- --------------------------------------------------------
 
@@ -157,7 +155,7 @@ CREATE TABLE `detalle_factura` (
   PRIMARY KEY  (`idDetalle`),
   KEY `fk_cabeceraFactura` (`fk_cabeceraFactura`),
   KEY `codigoEbook` (`codigoEbook`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 -- 
 -- Dumping data for table `detalle_factura`
@@ -167,6 +165,8 @@ INSERT INTO `detalle_factura` VALUES (3, 3, 1, 10);
 INSERT INTO `detalle_factura` VALUES (4, 3, 2, 3);
 INSERT INTO `detalle_factura` VALUES (5, 3, 3, 4);
 INSERT INTO `detalle_factura` VALUES (8, 2, 1, 32);
+INSERT INTO `detalle_factura` VALUES (12, 17, 1, 8);
+INSERT INTO `detalle_factura` VALUES (13, 17, 2, 5);
 
 -- --------------------------------------------------------
 
@@ -199,7 +199,7 @@ CREATE TABLE `ebook` (
 INSERT INTO `ebook` VALUES (1, 1, 'Envy', 'Espa&ntilde;ol', '0061345725', 'HarperCollins', 405, 'Rafael Ram&iacute;rez', 8.03, 'Drama', 'images/portadas/1.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (2, 2, 'Tales of the Otherworld', 'Espa&ntilde;ol', '0553807889', 'Bantam', 387, 'Marina Duarte', 7.99, 'Antopolog&iacute;a', 'images/portadas/2.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (3, 3, 'Kill me Softly', 'Espa&ntilde;ol', '1606843230', 'EgmontUSA', 336, 'Rafael Ram&iacute;rez', 6.99, 'Suspenso', 'images/portadas/3.jpg', NULL, 'pdf/dumb.pdf');
-INSERT INTO `ebook` VALUES (4, 4, 'The Wise Man''s Fear', 'Espa&ntilde;ol', '0756404738', 'DAW Books', 994, 'Ana Valencia', 5.99, 'Ficci&oacute;n', 'images/portadas/4.jpg', '«Todo hombre sabio teme tres cosas: la tormenta en el mar, la noche sin luna y la ira de un hombre amable.»\r\nEl hombre había desaparecido. El mito no. Músico, mendigo, ladr&oacute;n, estudiante, mago, trotamundos, h&eacute;roe y asesino, Kvothe hab&iacute;a borrado su rastro. Y ni siquiera ahora que le han encontrado, ni siquiera ahora que las tinieblas invaden los rincones del mundo, est&aacute; dispuesto a regresar. Pero su historia prosigue, la aventura contin&uacute;a, y Kvothe seguir&aacute; cont&aacute;ndola para revelar la verdad tras la leyenda.\r\nEs la ma&ntilde;ana del segundo d&iacute;a, y tres hombres se sientan a una mesa de Roca de Gu&iacute;a: un posadero de cabello rojo como una llama, su pupilo Bast y Cronista, que moja la pluma en el tintero y se prepara a transcribir... El temor de un hombre sabio empieza donde terminaba El nombre del viento: en la Universidad. De la que luego Kvothe se ver&aacute; obligado a partir en pos del nombre del viento, en pos de la aventura, en pos de esas historias que aparecen en libros o se cuentan junto a una hoguera del camino o en una taberna, en pos de la antigua orden de los caballeros Amyr y, sobre todo, en pos de los Chandrian.\r\nSu viaje le lleva a la corte plagada de intrigas del maer Alveron en el reino de Vintas, al bosque de Eld en persecuci&oacute;n de unos bandidos, a las colinas azotadas por las tormentas que rodean la ciudad de Ademre, a los confines crepusculares del reino de los Fata. Y cada vez parece que tiene algo m&aacute;s cerca la soluci&oacute;n del misterio de los Chandrian, y su venganza.\r\n', 'pdf/4.pdf');
+INSERT INTO `ebook` VALUES (4, 4, 'The Wise Man''s Fear', 'Espa&ntilde;ol', '0756404738', 'DAW Books', 994, 'Ana Valencia', 5.99, 'Ficci&oacute;n', 'images/portadas/4.jpg', 'Todo hombre sabio teme tres cosas: la tormenta en el mar, la noche sin luna y la ira de un hombre amable.\r\nEl hombre hab&iacute;a desaparecido. El mito no. M&uacute;sico, mendigo, ladr&oacute;n, estudiante, mago, trotamundos, h&eacute;roe y asesino, Kvothe hab&iacute;a borrado su rastro. Y ni siquiera ahora que le han encontrado, ni siquiera ahora que las tinieblas invaden los rincones del mundo, est&aacute; dispuesto a regresar. Pero su historia prosigue, la aventura contin&uacute;a, y Kvothe seguir&aacute; cont&aacute;ndola para revelar la verdad tras la leyenda.\r\nEs la ma&ntilde;ana del segundo d&iacute;a, y tres hombres se sientan a una mesa de Roca de Gu&iacute;a: un posadero de cabello rojo como una llama, su pupilo Bast y Cronista, que moja la pluma en el tintero y se prepara a transcribir... El temor de un hombre sabio empieza donde terminaba El nombre del viento: en la Universidad. De la que luego Kvothe se ver&aacute; obligado a partir en pos del nombre del viento, en pos de la aventura, en pos de esas historias que aparecen en libros o se cuentan junto a una hoguera del camino o en una taberna, en pos de la antigua orden de los caballeros Amyr y, sobre todo, en pos de los Chandrian.\r\nSu viaje le lleva a la corte plagada de intrigas del maer Alveron en el reino de Vintas, al bosque de Eld en persecuci&oacute;n de unos bandidos, a las colinas azotadas por las tormentas que rodean la ciudad de Ademre, a los confines crepusculares del reino de los Fata. Y cada vez parece que tiene algo m&aacute;s cerca la soluci&oacute;n del misterio de los Chandrian, y su venganza.\r\n', 'pdf/4.pdf');
 INSERT INTO `ebook` VALUES (5, 5, 'Allegiance', 'Espa&ntilde;ol', '0373210434', 'HarlequinTeen', 494, 'Laura Rodr&iacute;guez', 7.39, 'Historico', 'images/portadas/5.jpg', NULL, 'pdf/dumb.pdf');
 INSERT INTO `ebook` VALUES (6, 6, 'Angel Stone', 'Espa&ntilde;ol', '0867233154', 'Ballantine Books', 288, 'Luis Calle', 9.99, 'Romance', 'images/portadas/6.jpg', NULL, 'pdf/6.pdf');
 INSERT INTO `ebook` VALUES (7, 7, 'Bad Girls Don''t Die', 'Espa&ntilde;ol', '0183015265', 'Disney Hyperion ', 352, 'Marina Duarte', 6.98, 'Paranormal', 'images/portadas/7.jpg', NULL, 'pdf/dumb.pdf');
@@ -258,7 +258,7 @@ CREATE TABLE `mensaje` (
   `asunto` varchar(50) default NULL,
   `texto` text NOT NULL,
   PRIMARY KEY  (`idMensaje`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 -- 
 -- Dumping data for table `mensaje`
@@ -268,9 +268,6 @@ INSERT INTO `mensaje` VALUES (1, 'Ray', 'ray@123.com', 'nada', 'Alcaesto');
 INSERT INTO `mensaje` VALUES (2, 'Kimiko', 'k9@tokyo.com', 'hello', 'moshi moshi');
 INSERT INTO `mensaje` VALUES (3, 'Clay', 'cowboy@texas.com', 'Howdy', 'partner');
 INSERT INTO `mensaje` VALUES (4, 'Ohmi', 'xaolin@me.com', 'Greetings', 'Greetings stranger.');
-INSERT INTO `mensaje` VALUES (5, 'asdasdtty', 'sasdasd', 'asdasd', 'qwfxvcxvc');
-INSERT INTO `mensaje` VALUES (6, 'Armin', 'armina@shinna.com', 'Titan Attack!', 'Everyone\\''s dead!');
-INSERT INTO `mensaje` VALUES (7, 'DS', 'darkspines', 'hello', 'are you there?');
 
 -- --------------------------------------------------------
 
@@ -291,7 +288,7 @@ CREATE TABLE `usuario` (
   `email` varchar(45) NOT NULL,
   `pais` varchar(45) NOT NULL,
   PRIMARY KEY  (`idUsuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- 
 -- Dumping data for table `usuario`
@@ -300,6 +297,7 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` VALUES (1, 'administrador', 'Pa$$w0rd', 'images/perfil/default.jpg', 'Admin', 'Ebbbooks', '1989-08-03', 'Soy Admin', 'f', 'admin@gmail.com', 'Ecuador');
 INSERT INTO `usuario` VALUES (2, 'connantrutman', 'connanmismo', 'images/perfil/default.jpg', 'Connan', 'Trutman', '1980-05-23', 'asdasd', 'm', 'connanmismo@hotmail.com', 'Ecuador');
 INSERT INTO `usuario` VALUES (3, 'jonathan92', 'venga', 'images/perfil/default.jpg', 'Jonathan', 'Lopez', '1983-10-08', 'Soy un usuario de Prueba', 'm', 'jonathan92@gmail.com', 'Ecuador');
+INSERT INTO `usuario` VALUES (4, 'Darkspines-00', 'Mobius00', 'images/perfil/default.jpg', 'Edwin', 'Robalino', '1994-11-13', 'I like trains', 'm', 'edboroba@gmail.com', 'Ecuador');
 
 -- 
 -- Constraints for dumped tables
