@@ -4,7 +4,7 @@
 <body>
 <div id="main">
 <?php
-	$usuario=$_POST["usuario"];
+	$usuario=$_POST["nombreUsuario"];
 	$idUsuario=$_POST["idUsuario"];
 	$contrasena=$_POST["contrasena"];
 	$foto=$_POST["foto"];

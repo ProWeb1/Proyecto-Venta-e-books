@@ -7,6 +7,7 @@
 <?php
 $nombreCompleto=$_POST["nombreCompleto"];
 $idAutor=$_POST["idAutor"];
+$foto=$_POST["foto"];
 
 echo "Edici&oacute;n en proceso ....  </br>";
 
