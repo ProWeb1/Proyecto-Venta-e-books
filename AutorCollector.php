@@ -21,22 +21,22 @@ class AutorCollector extends Collector
     return $ObjAutor;
   }
 
-  function createAutor($nombre) {    
-    $insertrow = self::$db->insertRow("INSERT INTO ebbbooks.autor (idAutor, nombreCompleto) VALUES (?, ?)", array(null, "{$nombre}"));
+  function createAutor($nombre,$foto) {    
+    $insertrow = self::$db->insertRow("INSERT INTO ebbbooks.autor (idAutor, nombreCompleto, foto) VALUES (?, ?, ?)", array(null, "{$nombre}", "{$foto}"));
   }  
 
   function readAutor() {
     $rows = self::$db->getRows("SELECT * FROM autor ");        
     $arrayAutor= array();        
     foreach ($rows as $c){
-      $aux = new Autor($c{'idAutor'},$c{'nombreCompleto'},$c{'nombreCompleto'});
+      $aux = new Autor($c{'idAutor'},$c{'nombreCompleto'},$c{'foto'});
       array_push($arrayAutor, $aux);
     }
     return $arrayAutor;        
   }
   
-  function updateAutor($id,$nombreCompleto) {    
-    $insertrow = self::$db->updateRow("UPDATE ebbbooks.autor SET autor.nombreCompleto = ?  WHERE autor.idAutor = ? ", array( "{$nombreCompleto}",$id));
+  function updateAutor($id,$nombreCompleto,$foto) {    
+    $insertrow = self::$db->updateRow("UPDATE ebbbooks.autor SET autor.nombreCompleto = ?, autor.foto = ?  WHERE autor.idAutor = ? ", array( "{$nombreCompleto}","{$foto}",$id));
   }  
 
   function deleteAutor($id) {    
@@ -47,3 +47,4 @@ class AutorCollector extends Collector
 
 }
 ?>
+

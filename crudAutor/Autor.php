@@ -3,12 +3,15 @@
 class Autor
 {
     private $idAutor;   
-		private $nombreCompleto;
+	private $nombreCompleto;
+	private $foto;
    
     
-     function __construct($idAutor, $nombreCompleto) {
+     function __construct($idAutor, $nombreCompleto,$foto) {
        self::setIdAutor($idAutor);
        self::setnombreCompleto($nombreCompleto);
+	   self::setfoto($foto);
+	 
      }
     
      function setIdAutor($idAutor){
@@ -23,7 +26,13 @@ class Autor
      function getnombreCompleto(){
        return $this->nombreCompleto;
      } 
-   
+	 
+   function setFoto($foto){
+       $this->foto = $foto;
+     } 
+     function getFoto(){
+       return $this->foto;
+     } 
 }
 
-?> 
+?>

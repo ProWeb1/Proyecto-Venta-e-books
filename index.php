@@ -48,41 +48,27 @@ $nombreUsu=$_GET["nombreUsu"];
           </div>
           <!-- Navegaci&oacute;n-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <?php
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#about">Nosotros</a></li>
+              <li><span>|</span></li>
+              <li><a href="#work">Cat&aacute;logo</a></li>
+              <li><span>|</span></li>
+              <li><a href="#noticias">Noticias</a></li>
+              <li><span>|</span></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><span>|</span></li>
+               <?php
               if($_SESSION['actualmente_ingresado'] == 1){
-            ?>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">Nosotros</a></li>
-              <li><span>|</span></li>
-              <li><a href="#work">Cat&aacute;logo</a></li>
-              <li><span>|</span></li>
-              <li><a href="#noticias">Noticias</a></li>
-              <li><span>|</span></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><span>|</span></li>
+              ?>
               <li><a id ="salida" href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i><?php echo " ".$_SESSION["username"]; ?></a></li>
-              <li><span>|</span></li>
-              <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
-              <li><span>|</span></li>
-              <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
-            </ul>
-            <?php }else{?>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about">Nosotros</a></li>
-              <li><span>|</span></li>
-              <li><a href="#work">Cat&aacute;logo</a></li>
-              <li><span>|</span></li>
-              <li><a href="#noticias">Noticias</a></li>
-              <li><span>|</span></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><span>|</span></li>
+             <?php }else{?>
               <li><a href="" onclick="location.href='login_logout.php'"><i class="fa fa-user"></i></a></li>
+                <?php } ?>
               <li><span>|</span></li>
               <li><a href="" onclick="location.href='carritoCompras.php'"><i class="fa fa-shopping-cart"></i></a></li>
               <li><span>|</span></li>
               <li><a href="" onclick="location.href='pdf/mapaSitio.pdf'"><i class="fa fa-sitemap"></i></a></li>
             </ul>
-            <?php } ?>
           </div><!-- /.navbar-baja -->
         </div><!-- /.contenedor fluido-->
       </nav><!-- /Imagen grande Final -->
@@ -124,10 +110,10 @@ $nombreUsu=$_GET["nombreUsu"];
                       <li><a href="categorias.php"><img src="images/slider/4.jpg" alt="img04"><h4>Suspenso</h4></a></li>
                     </ul>
                     <ul>
-                      <li><a href="autores.php"><img src="images/slider/5.jpg" alt="img05"><h4>J. K. Rowling</h4></a></li>
-                      <li><a href="autores.php"><img src="images/slider/6.jpg" alt="img06"><h4>Marc Levy</h4></a></li>
-                      <li><a href="autores.php"><img src="images/slider/7.jpg" alt="img07"><h4>Marissa Meyer</h4></a></li>
-                      <li><a href="autores.php"><img src="images/slider/8.jpg" alt="img08"><h4>Lauren Kate</h4></a></li>
+                      <li><a href="autores.php"><img src="images/autores/5.jpg" alt="img05"><h4>Cayla Kluver</h4></a></li>
+                      <li><a href="autores.php"><img src="images/autores/6.jpg" alt="img06"><h4>Julia Dark</h4></a></li>
+                      <li><a href="autores.php"><img src="images/autores/7.jpg" alt="img07"><h4>Katie Alender</h4></a></li>
+                      <li><a href="autores.php"><img src="images/autores/8.jpg" alt="img08"><h4>Amber Lynn</h4></a></li>
                     </ul>
                     <ul>
                       <li><a href="novedades.php"><img src="images/slider/9.jpg" alt="img09"><h4>Reckoning</h4></a></li>

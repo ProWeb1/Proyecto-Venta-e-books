@@ -84,7 +84,7 @@ session_start();
 
 
                   <?php
-include ('AutorCollector.php');
+include ('crudAutor/AutorCollector.php');
 
 $AutorArray = array();
 $AutorObj = new AutorCollector();
