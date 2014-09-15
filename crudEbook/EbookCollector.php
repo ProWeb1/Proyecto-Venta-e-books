@@ -2,7 +2,7 @@
 
 include_once('Ebook.php');
 include_once('Collector.php');
-include_once("AutorCollector.php");
+include_once("../crudAutor/AutorCollector.php");
 
   
   /*
