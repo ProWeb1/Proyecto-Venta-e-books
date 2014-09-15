@@ -214,7 +214,7 @@ $nombreUsu=$_GET["nombreUsu"];
       <div id="contacto" class="container_wapper">
         <div class="container-fluid">
           <h1>Contacto</h1>
-          <div class="col-md-4">
+          <div class="col-md-7">
             <h2>Qui&eacute;nes somos.</h2>
             <p align="justify"><strong>eBBBOOKS</strong> es una compa&ntilde;&iacute;a que se encarga de la venta de traduccciones de e-books por medio de una plataforma en l&iacute;nea, con el objetivo de ampliar el repertorio de e-books en el idioma castellano y crear una cultura ecol&oacute;gica basado en la compra de e-books.    
             <br>
@@ -229,7 +229,7 @@ $nombreUsu=$_GET["nombreUsu"];
             <strong>Tel&eacute;fono:</strong> 042-123456<br />
             <strong>Direcci&oacute;n:</strong> KM 30 1/2 v&iacute;a Per&iacute;metral</p>
           </div>
-          <form action="enviarMensaje.php" method="post" class="col-md-8">
+          <form action="enviarMensaje.php" method="post" class="col-md-5">
             <div class="row">
               <div class="col-md-12">
                 <h2>Envianos un mensaje</h2>

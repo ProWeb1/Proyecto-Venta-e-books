@@ -29,7 +29,7 @@ if($_SESSION['actualmente_ingresado'] == 1){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> <img src= "images/logo/ebbbooks-logo.png"></a>
+            <a class="navbar-brand" href="index.php"> <img src= "images/logo/ebbbooks-logo.png"></a>
           </div>
           <!-- Navegación-->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
